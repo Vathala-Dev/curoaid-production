@@ -461,46 +461,105 @@ function WhyChooseSection() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <SectionBadge label="Why Choose" />
-        <div className="flex flex-col lg:flex-row gap-14 mt-6">
-          <div className="flex-shrink-0 lg:w-[420px]">
+
+        <div className="grid grid-cols-1 lg:grid-cols-[500px_1fr] gap-16">
+
+          {/* ================= LEFT SIDE ================= */}
+          <div className="w-full">
+
+            {/* Badge */}
+            <SectionBadge label="Why Choose" />
+
+            {/* Heading */}
             <h2
-              className="text-3xl lg:text-[40px] leading-tight text-black mb-3"
+              className="text-3xl lg:text-[40px] leading-[1.15] text-black mt-7 mb-4"
               style={{ fontFamily: "'Poppins:Bold'" }}
             >
               Why Choose Curoaid?
             </h2>
-            <p className="text-[#454646] text-base leading-relaxed mb-4" style={{ fontFamily: "'Poppins:Regular'" }}>
-              At CuroAid, we believe healthcare should be more than just a service — it should provide{" "}
-              <strong className="text-black" style={{ fontFamily: "'Poppins:SemiBold'" }}>
-                comfort, trust, dignity, and peace of mind
-              </strong>
-              . Our home healthcare services are designed to bring professional care closer to patients while making the experience easier for families.
-            </p>
-            <p className="text-black text-[18px] mb-6" style={{ fontFamily: "'Poppins:SemiBold'" }}>
+
+            {/* Subtitle */}
+            <p
+              className="text-black text-[18px] leading-[1.4] mb-6"
+              style={{ fontFamily: "'Poppins:SemiBold'" }}
+            >
               Care You Can Trust, Right at Home
             </p>
+
+            {/* Image */}
             <img
               src={imgWhyChoose}
               alt="Why Choose CuroAid"
-              className="w-full h-[380px] object-cover rounded-xl shadow-lg"
+              className="w-full h-[448px] object-cover rounded-xl shadow-md"
             />
+
           </div>
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8 content-start pt-12">
-            {features.map((f) => (
-              <div key={f.title} className="flex gap-4">
-                <img src={f.icon} alt="" className="w-6 h-6 mt-0.5 flex-shrink-0" />
-                <div>
-                  <h3 className="text-black text-base mb-1" style={{ fontFamily: "'Poppins:SemiBold'" }}>
-                    {f.title}
-                  </h3>
-                  <p className="text-[#454646] text-sm leading-relaxed" style={{ fontFamily: "'Poppins:Regular'" }}>
-                    {f.desc}
-                  </p>
+
+
+          {/* ================= RIGHT SIDE ================= */}
+          <div className="w-full pt-3">
+
+            {/* Description */}
+            <p
+              className="text-[#454646] text-base leading-[1.6] max-w-[720px] mb-7"
+              style={{ fontFamily: "'Poppins:Regular'" }}
+            >
+              At CuroAid, we believe healthcare should be more than just a
+              service — it should provide{" "}
+              <strong
+                className="text-black"
+                style={{ fontFamily: "'Poppins:SemiBold'" }}
+              >
+                comfort, trust, dignity, and peace of mind.
+              </strong>{" "}
+              Our home healthcare services are designed to bring professional
+              care closer to patients while making the experience easier for
+              families.
+            </p>
+
+
+            {/* Features */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+
+              {features.map((f) => (
+                <div
+                  key={f.title}
+                  className="flex items-start gap-4"
+                >
+
+                  {/* Check Icon */}
+                  <img
+                    src={f.icon}
+                    alt=""
+                    className="w-6 h-6 mt-1 flex-shrink-0"
+                  />
+
+                  {/* Feature Content */}
+                  <div className="min-w-0">
+
+                    <h3
+                      className="text-black text-[16px] leading-[1.35] mb-1"
+                      style={{ fontFamily: "'Poppins:SemiBold'" }}
+                    >
+                      {f.title}
+                    </h3>
+
+                    <p
+                      className="text-[#454646] text-[15px] leading-[1.55]"
+                      style={{ fontFamily: "'Poppins:Regular'" }}
+                    >
+                      {f.desc}
+                    </p>
+
+                  </div>
+
                 </div>
-              </div>
-            ))}
+              ))}
+
+            </div>
+
           </div>
+
         </div>
       </div>
     </section>
