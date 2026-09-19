@@ -95,7 +95,7 @@ export default function CuroAidHero() {
       justify-content: space-between;
       overflow: hidden;
       background-color: #f1f8f9;
-      background-image: url('./assets/banner-new.png');
+      background-image: url('./assets/banner-new.webp');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
