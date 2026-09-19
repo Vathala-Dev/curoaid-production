@@ -1,0 +1,308 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ============================================
+       PRIMARY COLORS
+       Used for main brand identity and primary actions
+       ============================================ */
+    --primary-background: #4cc6f0;
+    --primary-background-light: #4cc6f075;
+    --primary-background-overlay: #cff4ff;
+    --primary-background-overlay-light: #cff4ff42;
+    --primary-text: #1b355a;
+    --primary-accent: #006487a8;
+
+    /* ============================================
+       SECONDARY COLORS
+       Used for secondary actions and backgrounds
+       ============================================ */
+    --secondary-background: #ffffff;
+    --secondary-background-dark: #060a15;
+    --secondary-text: #0a1c3e;
+    --secondary-text-muted: #627b9c;
+
+    /* ============================================
+       SUCCESS/ACTION COLORS
+       Used for positive actions and success states
+       ============================================ */
+    --success-background: #74c067;
+    --success-background-alt: #6eb561;
+    --success-text: #000000;
+
+    /* ============================================
+       ACCENT COLORS
+       Used for highlights and special elements
+       ============================================ */
+    --accent-teal: #3fbebc;
+    --accent-teal-light: #3fbebc;
+
+    /* ============================================
+       TEXT COLORS
+       Hierarchy of text colors for various contexts
+       ============================================ */
+    --text-primary: #000000;
+    --text-secondary: #454646;
+    --text-secondary-transparent: #454646f9;
+    --text-muted: #627b9c;
+    --text-light: #d5dbe3;
+    --text-light-alt: #d6dbe3;
+    --text-white: #ffffff;
+    --text-white-transparent: #fffffff9;
+    --text-accent: #4cc6f0;
+
+    /* ============================================
+       BACKGROUND COLORS
+       Various background shades for different sections
+       ============================================ */
+    --bg-white: #ffffff;
+    --bg-overlay-dark: #000000bc;
+    --bg-overlay-medium: #444444a8;
+    --bg-overlay-light: #2e2c2c84;
+    --bg-transparent-dark: #0000001e;
+    --bg-transparent-medium: #00000021;
+    --bg-transparent-light: #00000023;
+    --bg-muted: #a0acb021;
+    --bg-muted-light: #e7e7e75b;
+
+    /* ============================================
+       BORDER COLORS
+       Used for dividers, cards, and component borders
+       ============================================ */
+    --border-primary: #d1d5db;
+    --border-light: #0000000a;
+    --border-medium: #00000016;
+    --border-accent: #3fbebc;
+    --border-transparent: #e2d8d83d;
+
+    /* ============================================
+       COMPONENT SPECIFIC COLORS
+       ============================================ */
+    
+    /* Header Component */
+    --header-bg: #ffffff;
+    --header-text: #1b355a;
+    --header-menu-text: #1b355a;
+
+    /* Button Component */
+    --button-primary-bg: #4cc6f0;
+    --button-primary-text: #000000;
+    --button-success-bg: #74c067;
+    --button-success-text: #ffffff;
+
+    /* Footer Component */
+    --footer-bg: #060a15;
+    --footer-text: #ffffff;
+    --footer-link-text: #454646f9;
+
+    /* Card Component */
+    --card-bg: #ffffff;
+    --card-border: #d1d5db;
+
+    /* Icon Button Component */
+    --icon-button-bg: #6eb561;
+    --icon-button-bg-alt: #ffffff;
+
+    /* Line/Divider Component */
+    --divider-light: #0000001e;
+    --divider-medium: #00000021;
+    --divider-dark: #00000023;
+    --divider-accent: #3fbebc;
+
+    /* ============================================
+       TYPOGRAPHY VARIABLES
+       Font sizes, weights, line heights, and spacing
+       ============================================ */
+    
+    /* Font Sizes */
+    --font-size-xs: 8px;
+    --font-size-sm: 12px;
+    --font-size-base: 13px;
+    --font-size-md: 14px;
+    --font-size-lg: 15px;
+    --font-size-xl: 17px;
+    --font-size-2xl: 19px;
+    --font-size-3xl: 20px;
+    --font-size-4xl: 39px;
+    --font-size-5xl: 58px;
+
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    /* Line Heights */
+    --line-height-xs: 14px;
+    --line-height-sm: 20px;
+    --line-height-base: 21px;
+    --line-height-md: 22px;
+    --line-height-lg: 24px;
+    --line-height-xl: 25px;
+    --line-height-2xl: 26px;
+    --line-height-3xl: 27px;
+    --line-height-4xl: 30px;
+    --line-height-5xl: 33px;
+    --line-height-6xl: 36px;
+    --line-height-7xl: 50px;
+    --line-height-8xl: 52px;
+    --line-height-9xl: 53px;
+    --line-height-10xl: 57px;
+    --line-height-11xl: 88px;
+
+    /* Letter Spacing */
+    --letter-spacing-wide: 1px;
+
+    /* ============================================
+       SPACING VARIABLES
+       Margins, paddings, and gaps
+       ============================================ */
+    
+    /* Extra Small Spacing */
+    --spacing-1: 2px;
+    --spacing-2: 4px;
+    --spacing-3: 6px;
+    --spacing-4: 8px;
+    --spacing-5: 10px;
+    --spacing-6: 12px;
+    --spacing-7: 14px;
+    --spacing-8: 16px;
+    --spacing-9: 18px;
+    --spacing-10: 20px;
+    --spacing-11: 22px;
+    --spacing-12: 24px;
+
+    /* Small to Medium Spacing */
+    --spacing-13: 26px;
+    --spacing-14: 28px;
+    --spacing-15: 30px;
+    --spacing-16: 32px;
+    --spacing-17: 34px;
+    --spacing-18: 36px;
+    --spacing-19: 38px;
+    --spacing-20: 40px;
+    --spacing-22: 44px;
+    --spacing-23: 46px;
+    --spacing-24: 48px;
+    --spacing-25: 50px;
+
+    /* Large Spacing */
+    --spacing-28: 56px;
+    --spacing-30: 60px;
+    --spacing-33: 66px;
+    --spacing-42: 84px;
+    --spacing-45: 90px;
+    --spacing-47: 94px;
+    --spacing-49: 98px;
+    --spacing-51: 102px;
+    --spacing-53: 106px;
+    --spacing-54: 108px;
+    --spacing-57: 114px;
+    --spacing-59: 118px;
+    --spacing-61: 122px;
+
+    /* Extra Large Spacing */
+    --spacing-66: 132px;
+    --spacing-68: 136px;
+    --spacing-62: 248px;
+    --spacing-63: 254px;
+    --spacing-64: 256px;
+    --spacing-65: 258px;
+    --spacing-130: 260px;
+    --spacing-131: 262px;
+    --spacing-132: 264px;
+    --spacing-137: 274px;
+    --spacing-144: 288px;
+    --spacing-148: 296px;
+    --spacing-152: 304px;
+    --spacing-172: 344px;
+    --spacing-186: 372px;
+    --spacing-191: 382px;
+
+    /* Mega Spacing */
+    --spacing-579: 1158px;
+    --spacing-587: 1174px;
+    --spacing-841: 1682px;
+    --spacing-863: 1726px;
+
+    /* ============================================
+       BORDER RADIUS VARIABLES
+       Rounded corners for various components
+       ============================================ */
+    --radius-xs: 2px;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 10px;
+    --radius-xl: 12px;
+    --radius-2xl: 18px;
+    --radius-3xl: 20px;
+    --radius-4xl: 24px;
+    --radius-5xl: 28px;
+    --radius-6xl: 34px;
+
+    /* ============================================
+       LAYOUT VARIABLES
+       Common width and height values
+       ============================================ */
+    
+    /* Width Percentages */
+    --width-6: 6%;
+    --width-8: 8%;
+    --width-10: 10%;
+    --width-12: 12%;
+    --width-16: 16%;
+    --width-20: 20%;
+    --width-22: 22%;
+    --width-26: 26%;
+    --width-28: 28%;
+    --width-30: 30%;
+    --width-32: 32%;
+    --width-36: 36%;
+    --width-38: 38%;
+    --width-40: 40%;
+    --width-42: 42%;
+    --width-44: 44%;
+    --width-46: 46%;
+    --width-50: 50%;
+    --width-52: 52%;
+    --width-54: 54%;
+    --width-56: 56%;
+    --width-58: 58%;
+    --width-62: 62%;
+    --width-66: 66%;
+    --width-68: 68%;
+    --width-70: 70%;
+    --width-72: 72%;
+    --width-74: 74%;
+    --width-76: 76%;
+    --width-78: 78%;
+    --width-80: 80%;
+    --width-82: 82%;
+    --width-88: 88%;
+    --width-90: 90%;
+    --width-92: 92%;
+    --width-94: 94%;
+    --width-96: 96%;
+    --width-98: 98%;
+
+    /* Fixed Widths */
+    --width-fixed-sm: 14px;
+    --width-fixed-md: 16px;
+    --width-fixed-lg: 18px;
+    --width-fixed-xl: 22px;
+    --width-fixed-2xl: 24px;
+    --width-fixed-3xl: 28px;
+    --width-fixed-4xl: 32px;
+    --width-fixed-5xl: 38px;
+    --width-fixed-6xl: 40px;
+    --width-fixed-7xl: 48px;
+    --width-fixed-129: 258px;
+    --width-fixed-131: 262px;
+    --width-fixed-191: 382px;
+    --width-fixed-206: 412px;
+    --width-fixed-910: 1820px;
+  }
+}

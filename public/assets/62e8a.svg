@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24.4394" height="24.4394" viewBox="0 0 24.4394 24.4394" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 38">
+<circle id="Ellipse 10" cx="12.2197" cy="12.2197" r="12.2197" fill="url(#paint0_linear_0_55)"/>
+<path id="Vector" d="M12.8423 17.2673C12.7034 17.4468 12.5066 17.5964 12.3329 17.5964C12.1593 17.5964 11.9624 17.4393 11.8177 17.2598L8.57605 13.0702L9.60644 11.7385L12.3387 15.2697L19.563 5.86553L20.576 7.21968L12.8423 17.2673Z" fill="white"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_55" x1="12.2197" y1="0" x2="12.2197" y2="24.4394" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6EB561"/>
+<stop offset="1" stop-color="#4CC6F0"/>
+</linearGradient>
+</defs>
+</svg>
