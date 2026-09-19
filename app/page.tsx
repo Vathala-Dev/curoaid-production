@@ -86,14 +86,9 @@ function Navbar() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 h-[72px] flex items-center justify-between">
 
-        <a
-          href="#"
-          className="flex items-center gap-2 sm:gap-3 md:gap-4"
-        >
-          {/* Logo */}
-          <div
-            className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-lg overflow-hidden flex-shrink-0"
-          >
+        <a href="#" className="flex items-center gap-4">
+          {/* Logo Icon */}
+          <div className="w-[80px] h-[80px] rounded-[10px] overflow-hidden flex-shrink-0">
             <img
               src={imgFinalisedLogo1}
               alt="CuroAid Logo"
@@ -101,27 +96,17 @@ function Navbar() {
             />
           </div>
 
-          {/* Brand */}
+          {/* Brand Name */}
           <div className="flex flex-col justify-center">
             <span
-              className="       text-xl        sm:text-2xl        md:text-[28px]        lg:text-[30px]        leading-tight        font-bold        text-black whitespace-nowrap
-      "
+              className="text-[30px] leading-[32px] font-bold text-black"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               CuroAid
             </span>
 
             <span
-              className="
-        text-[9px]
-        sm:text-[11px]
-        md:text-xs
-        lg:text-sm
-        leading-tight
-        font-semibold
-        text-black
-        whitespace-nowrap
-      "
+              className="text-[14px] leading-[18px] font-semibold text-black"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Healthcare at Home
@@ -476,46 +461,105 @@ function WhyChooseSection() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <SectionBadge label="Why Choose" />
-        <div className="flex flex-col lg:flex-row gap-14 mt-6">
-          <div className="flex-shrink-0 lg:w-[420px]">
+
+        <div className="grid grid-cols-1 lg:grid-cols-[500px_1fr] gap-16">
+
+          {/* ================= LEFT SIDE ================= */}
+          <div className="w-full">
+
+            {/* Badge */}
+            <SectionBadge label="Why Choose" />
+
+            {/* Heading */}
             <h2
-              className="text-3xl lg:text-[40px] leading-tight text-black mb-3"
+              className="text-3xl lg:text-[40px] leading-[1.15] text-black mt-7 mb-4"
               style={{ fontFamily: "'Poppins:Bold'" }}
             >
               Why Choose Curoaid?
             </h2>
-            <p className="text-[#454646] text-base leading-relaxed mb-4" style={{ fontFamily: "'Poppins:Regular'" }}>
-              At CuroAid, we believe healthcare should be more than just a service — it should provide{" "}
-              <strong className="text-black" style={{ fontFamily: "'Poppins:SemiBold'" }}>
-                comfort, trust, dignity, and peace of mind
-              </strong>
-              . Our home healthcare services are designed to bring professional care closer to patients while making the experience easier for families.
-            </p>
-            <p className="text-black text-[18px] mb-6" style={{ fontFamily: "'Poppins:SemiBold'" }}>
+
+            {/* Subtitle */}
+            <p
+              className="text-black text-[18px] leading-[1.4] mb-6"
+              style={{ fontFamily: "'Poppins:SemiBold'" }}
+            >
               Care You Can Trust, Right at Home
             </p>
+
+            {/* Image */}
             <img
               src={imgWhyChoose}
               alt="Why Choose CuroAid"
-              className="w-full h-[380px] object-cover rounded-xl shadow-lg"
+              className="w-full h-[448px] object-cover rounded-xl shadow-md"
             />
+
           </div>
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8 content-start pt-12">
-            {features.map((f) => (
-              <div key={f.title} className="flex gap-4">
-                <img src={f.icon} alt="" className="w-6 h-6 mt-0.5 flex-shrink-0" />
-                <div>
-                  <h3 className="text-black text-base mb-1" style={{ fontFamily: "'Poppins:SemiBold'" }}>
-                    {f.title}
-                  </h3>
-                  <p className="text-[#454646] text-sm leading-relaxed" style={{ fontFamily: "'Poppins:Regular'" }}>
-                    {f.desc}
-                  </p>
+
+
+          {/* ================= RIGHT SIDE ================= */}
+          <div className="w-full pt-3">
+
+            {/* Description */}
+            <p
+              className="text-[#454646] text-base leading-[1.6] max-w-[720px] mb-7"
+              style={{ fontFamily: "'Poppins:Regular'" }}
+            >
+              At CuroAid, we believe healthcare should be more than just a
+              service — it should provide{" "}
+              <strong
+                className="text-black"
+                style={{ fontFamily: "'Poppins:SemiBold'" }}
+              >
+                comfort, trust, dignity, and peace of mind.
+              </strong>{" "}
+              Our home healthcare services are designed to bring professional
+              care closer to patients while making the experience easier for
+              families.
+            </p>
+
+
+            {/* Features */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+
+              {features.map((f) => (
+                <div
+                  key={f.title}
+                  className="flex items-start gap-4"
+                >
+
+                  {/* Check Icon */}
+                  <img
+                    src={f.icon}
+                    alt=""
+                    className="w-6 h-6 mt-1 flex-shrink-0"
+                  />
+
+                  {/* Feature Content */}
+                  <div className="min-w-0">
+
+                    <h3
+                      className="text-black text-[16px] leading-[1.35] mb-1"
+                      style={{ fontFamily: "'Poppins:SemiBold'" }}
+                    >
+                      {f.title}
+                    </h3>
+
+                    <p
+                      className="text-[#454646] text-[15px] leading-[1.55]"
+                      style={{ fontFamily: "'Poppins:Regular'" }}
+                    >
+                      {f.desc}
+                    </p>
+
+                  </div>
+
                 </div>
-              </div>
-            ))}
+              ))}
+
+            </div>
+
           </div>
+
         </div>
       </div>
     </section>
@@ -577,68 +621,233 @@ const blogPosts = [
   { title: "The careful way to choose a caregiver", excerpt: "Hiring care for someone you love shouldn't feel like rolling the dice. We hand-vet every professional ourselves, including backgrounds, credentials, and the harder-to-measure things, like patience.", accent: false },
 ];
 
+// function BlogsSection() {
+//   return (
+//     <section className="py-20 bg-[#f0fafe]">
+//       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+//         <SectionBadge label="Latest Blog" />
+//         <div className="flex flex-col lg:flex-row justify-between items-start gap-4 mt-4 mb-10">
+//           <h2 className="text-3xl lg:text-[40px] leading-tight text-black" style={{ fontFamily: "'Poppins:Bold'" }}>
+//             Blogs | Home Healthcare
+//           </h2>
+//           <p className="text-[#454646] text-base leading-relaxed lg:max-w-lg lg:text-right" style={{ fontFamily: "'Poppins:Regular'" }}>
+//             Stay informed with practical healthcare tips, expert guidance, and useful information to help you make better decisions for yourself and your loved ones.
+//           </p>
+//         </div>
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+//           {blogPosts.map((post, i) => (
+//             <div
+//               key={i}
+//               className="rounded-xl overflow-hidden shadow-md flex flex-col"
+//               style={{ background: post.accent ? "#74c067" : "white" }}
+//             >
+//               <img src={imgBlog} alt={post.title} className="w-full h-[220px] object-cover rounded-t-xl" />
+//               <div className="p-5 flex flex-col flex-1">
+//                 <h3
+//                   className={`text-base mb-3 leading-snug ${post.accent ? "text-white" : "text-black"}`}
+//                   style={{ fontFamily: "'Poppins:SemiBold'" }}
+//                 >
+//                   {post.title}
+//                 </h3>
+//                 <p
+//                   className={`text-sm leading-relaxed mb-5 flex-1 ${post.accent ? "text-white/95" : "text-[#454646]"}`}
+//                   style={{ fontFamily: "'Poppins:Regular'" }}
+//                 >
+//                   {post.excerpt}
+//                 </p>
+//                 {post.accent ? (
+//                   <button
+//                     className="self-start flex items-center gap-2 bg-white text-black text-sm px-5 py-2.5 rounded-xl shadow hover:shadow-md transition-shadow"
+//                     style={{ fontFamily: "'Poppins:Bold'" }}
+//                   >
+//                     Read More
+//                     <img src={imgVector} alt="" className="w-[18px] h-[18px]" />
+//                   </button>
+//                 ) : (
+//                   <button
+//                     className="self-start flex items-center gap-2 text-white text-sm px-5 py-2.5 rounded-xl shadow hover:opacity-90 transition-opacity"
+//                     style={{
+//                       backgroundImage: "linear-gradient(130deg, #4cc6f0 12.67%, #74c067 85.05%)",
+//                       fontFamily: "'Poppins:Bold'",
+//                     }}
+//                   >
+//                     Read More
+//                     <img src={imgVectorWhite} alt="" className="w-[18px] h-[18px]" />
+//                   </button>
+//                 )}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
 function BlogsSection() {
+  // Middle card active by default
+  const [activeBlog, setActiveBlog] = useState(1);
+
   return (
     <section className="py-20 bg-[#f0fafe]">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+
         <SectionBadge label="Latest Blog" />
         <div className="flex flex-col lg:flex-row justify-between items-start gap-4 mt-4 mb-10">
           <h2 className="text-3xl lg:text-[40px] leading-tight text-black" style={{ fontFamily: "'Poppins:Bold'" }}>
             Blogs | Home Healthcare
           </h2>
           <p className="text-[#454646] text-base leading-relaxed lg:max-w-lg lg:text-right" style={{ fontFamily: "'Poppins:Regular'" }}>
-            Stay informed with practical healthcare tips, expert guidance, and useful information to help you make better decisions for yourself and your loved ones.
+            Stay updated with the latest news and insights in home healthcare.
           </p>
+
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {blogPosts.map((post, i) => (
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1400px] mx-auto px-6 lg:px-12">
+        {blogPosts.map((post, i) => {
+          const isActive = activeBlog === i;
+
+          return (
             <div
               key={i}
-              className="rounded-xl overflow-hidden shadow-md flex flex-col"
-              style={{ background: post.accent ? "#74c067" : "white" }}
+              onMouseEnter={() => setActiveBlog(i)}
+              onClick={() => setActiveBlog(i)}
+              className={`
+              rounded-xl
+              overflow-hidden
+              shadow-md
+              flex
+              flex-col
+              cursor-pointer
+              transition-all
+              duration-300
+              transform
+              ${isActive
+                  ? "bg-[#74c067] scale-[1.02] shadow-lg"
+                  : "bg-white hover:shadow-lg"
+                }
+            `}
             >
-              <img src={imgBlog} alt={post.title} className="w-full h-[220px] object-cover rounded-t-xl" />
+              {/* Blog Image */}
+              <img
+                src={imgBlog}
+                alt={post.title}
+                className="
+                w-full
+                h-[200px]
+                sm:h-[220px]
+                object-cover
+                rounded-t-xl
+              "
+              />
+
+              {/* Content */}
               <div className="p-5 flex flex-col flex-1">
+
+                {/* Title */}
                 <h3
-                  className={`text-base mb-3 leading-snug ${post.accent ? "text-white" : "text-black"}`}
+                  className={`
+                  text-[15px]
+                  sm:text-base
+                  mb-3
+                  leading-snug
+                  transition-colors
+                  duration-300
+                  ${isActive ? "text-white" : "text-black"}
+                `}
                   style={{ fontFamily: "'Poppins:SemiBold'" }}
                 >
                   {post.title}
                 </h3>
+
+                {/* Description */}
                 <p
-                  className={`text-sm leading-relaxed mb-5 flex-1 ${post.accent ? "text-white/95" : "text-[#454646]"}`}
+                  className={`
+                  text-[13px]
+                  sm:text-sm
+                  leading-relaxed
+                  mb-5
+                  flex-1
+                  transition-colors
+                  duration-300
+                  ${isActive ? "text-white/95" : "text-[#454646]"}
+                `}
                   style={{ fontFamily: "'Poppins:Regular'" }}
                 >
                   {post.excerpt}
                 </p>
-                {post.accent ? (
+
+                {/* Button */}
+                {isActive ? (
                   <button
-                    className="self-start flex items-center gap-2 bg-white text-black text-sm px-5 py-2.5 rounded-xl shadow hover:shadow-md transition-shadow"
+                    type="button"
+                    className="
+                    self-start
+                    flex
+                    items-center
+                    gap-2
+                    bg-white
+                    text-black
+                    text-sm
+                    px-5
+                    py-2.5
+                    rounded-xl
+                    shadow
+                    hover:shadow-md
+                    transition-all
+                  "
                     style={{ fontFamily: "'Poppins:Bold'" }}
                   >
                     Read More
-                    <img src={imgVector} alt="" className="w-[18px] h-[18px]" />
+
+                    <img
+                      src={imgVector}
+                      alt=""
+                      className="w-[18px] h-[18px]"
+                    />
                   </button>
                 ) : (
                   <button
-                    className="self-start flex items-center gap-2 text-white text-sm px-5 py-2.5 rounded-xl shadow hover:opacity-90 transition-opacity"
+                    type="button"
+                    className="
+                    self-start
+                    flex
+                    items-center
+                    gap-2
+                    text-white
+                    text-sm
+                    px-5
+                    py-2.5
+                    rounded-xl
+                    shadow
+                    hover:opacity-90
+                    transition-opacity
+                  "
                     style={{
-                      backgroundImage: "linear-gradient(130deg, #4cc6f0 12.67%, #74c067 85.05%)",
+                      backgroundImage:
+                        "linear-gradient(130deg, #4cc6f0 12.67%, #74c067 85.05%)",
                       fontFamily: "'Poppins:Bold'",
                     }}
                   >
                     Read More
-                    <img src={imgVectorWhite} alt="" className="w-[18px] h-[18px]" />
+
+                    <img
+                      src={imgVectorWhite}
+                      alt=""
+                      className="w-[18px] h-[18px]"
+                    />
                   </button>
                 )}
               </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
-    </section>
+    </section >
   );
 }
+
+
 
 function CTABannerSection() {
   return (
@@ -684,38 +893,108 @@ const faqs = [
 function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <SectionBadge label="FAQ" />
+    <section className="py-14 sm:py-16 lg:py-20 bg-white">
+      <div className="max-w-[900px] mx-auto px-5 sm:px-6 lg:px-8">
+
+        {/* Badge */}
+        <div className="flex justify-center">
+          <SectionBadge label="FAQ" />
+        </div>
+
+        {/* Heading */}
         <h2
-          className="text-3xl lg:text-[40px] leading-tight text-black mt-4 mb-10"
+          className="
+        text-center
+        text-[28px]
+        sm:text-[32px]
+        md:text-[36px]
+        lg:text-[40px]
+        leading-[1.2]
+        text-black
+        mt-4
+        mb-8
+        sm:mb-10
+      "
           style={{ fontFamily: "'Poppins:Bold'" }}
         >
           Frequently asked questions
         </h2>
-        <div className="max-w-4xl divide-y divide-gray-200">
+
+        {/* FAQ List */}
+        <div className="w-full max-w-[800px] mx-auto divide-y divide-gray-200">
+
           {faqs.map((faq, i) => (
-            <div key={i} className="py-5">
+            <div
+              key={i}
+              className="py-4 sm:py-5"
+            >
+              {/* Question */}
               <button
-                className="w-full flex items-center justify-between gap-4 text-left"
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                type="button"
+                className="
+              w-full
+              flex
+              items-center
+              justify-between
+              gap-4
+              text-left
+              group
+            "
+                onClick={() =>
+                  setOpenIndex(openIndex === i ? null : i)
+                }
               >
-                <span className="text-black text-base" style={{ fontFamily: "'Poppins:SemiBold'" }}>
+                <span
+                  className="
+                text-black
+                text-[14px]
+                sm:text-[15px]
+                md:text-[16px]
+                leading-6
+                pr-2
+              "
+                  style={{ fontFamily: "'Poppins:SemiBold'" }}
+                >
                   {faq.q}
                 </span>
+
                 <img
                   src={imgFAQArrow}
                   alt=""
-                  className={`w-5 h-5 flex-shrink-0 transition-transform duration-200 ${openIndex === i ? "rotate-180" : ""}`}
+                  className={`
+                w-4
+                h-4
+                sm:w-5
+                sm:h-5
+                flex-shrink-0
+                transition-transform
+                duration-300
+                ${openIndex === i ? "rotate-180" : ""}
+              `}
                 />
               </button>
+
+              {/* Answer */}
               {openIndex === i && (
-                <p className="text-[#454646] text-sm leading-relaxed mt-3" style={{ fontFamily: "'Poppins:Regular'" }}>
+                <p
+                  className="
+                text-[#454646]
+                text-[13px]
+                sm:text-[14px]
+                md:text-[15px]
+                leading-6
+                mt-3
+                pr-6
+                sm:pr-10
+              "
+                  style={{ fontFamily: "'Poppins:Regular'" }}
+                >
                   {faq.a}
                 </p>
               )}
             </div>
           ))}
+
         </div>
       </div>
     </section>
