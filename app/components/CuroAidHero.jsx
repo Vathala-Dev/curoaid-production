@@ -1122,7 +1122,7 @@ export default function CuroAidHero() {
       <main className="banner-wrapper">
         <div className="banner-inner">
           <section className="hero-left-col">
-            <a href="#" className="brand-header">
+            {/* <a href="#" className="brand-header">
               <div className="brand-logo-icon">
                 <svg viewBox="0 0 24 24">
                   <path
@@ -1133,7 +1133,7 @@ export default function CuroAidHero() {
                 <span className="brand-name">CuroAid</span>
                 <span className="brand-subline">Healthcare at Home</span>
               </div>
-            </a>
+            </a> */}
 
             <div className="hero-main-content">
               <div className="pill-badge">
@@ -1496,7 +1496,8 @@ export default function CuroAidHero() {
               }
               allow="autoplay; encrypted-media"
               allowFullScreen
-            />          </div>
+            />
+          </div>
         </div>
       </div>
 

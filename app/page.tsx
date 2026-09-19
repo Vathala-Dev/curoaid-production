@@ -86,9 +86,14 @@ function Navbar() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 h-[72px] flex items-center justify-between">
 
-        <a href="#" className="flex items-center gap-4">
-          {/* Logo Icon */}
-          <div className="w-[80px] h-[80px] rounded-[10px] overflow-hidden flex-shrink-0">
+        <a
+          href="#"
+          className="flex items-center gap-2 sm:gap-3 md:gap-4"
+        >
+          {/* Logo */}
+          <div
+            className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-lg overflow-hidden flex-shrink-0"
+          >
             <img
               src={imgFinalisedLogo1}
               alt="CuroAid Logo"
@@ -96,17 +101,27 @@ function Navbar() {
             />
           </div>
 
-          {/* Brand Name */}
+          {/* Brand */}
           <div className="flex flex-col justify-center">
             <span
-              className="text-[30px] leading-[32px] font-bold text-black"
+              className="       text-xl        sm:text-2xl        md:text-[28px]        lg:text-[30px]        leading-tight        font-bold        text-black whitespace-nowrap
+      "
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               CuroAid
             </span>
 
             <span
-              className="text-[14px] leading-[18px] font-semibold text-black"
+              className="
+        text-[9px]
+        sm:text-[11px]
+        md:text-xs
+        lg:text-sm
+        leading-tight
+        font-semibold
+        text-black
+        whitespace-nowrap
+      "
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Healthcare at Home
