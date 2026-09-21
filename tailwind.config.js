@@ -11,6 +11,9 @@ module.exports = {
             '2xl': '1536px'
         },
         extend: {
+            fontFamily: {
+                sans: ["var(--font-poppins)", "sans-serif"],
+            },
             colors: {
                 /* ============================================
                    PRIMARY COLOR SYSTEM
