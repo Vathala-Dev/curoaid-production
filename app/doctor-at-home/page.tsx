@@ -1,7 +1,6 @@
-function DoctorAtHome() {
+export default function DoctorAtHomePage() {
   return (
-    <div>
-      Doctor at Home
-    </div>
+    // your existing JSX
+    <>TEst</>
   );
 }
