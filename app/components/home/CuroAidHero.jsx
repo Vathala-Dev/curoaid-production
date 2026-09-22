@@ -2608,12 +2608,19 @@ export default function CuroAidHero() {
       }
 
       .hero-title {
-        font-size: 32px;
-      }
+         -webkit-text-stroke: 0.5px rgba(250, 255, 255, 0.7);
+          text-shadow:
+              1px 1px 2px rgba(0, 0, 0, 0.35),
+              -1px -1px 2px rgba(255, 255, 255, 0.35);
+     }
 
-      .hero-description {
-        font-size: 14.5px;
-      }
+        .hero-description {
+    color: #ffffff !important;
+    -webkit-text-stroke: 0;
+    text-shadow:
+      0 1px 2px rgba(100, 97, 97, 0.9),
+      0 2px 5px rgba(0, 0, 0, 0.65);
+  }
 
       .hero-cta-group {
         flex-direction: column;
@@ -2638,10 +2645,44 @@ export default function CuroAidHero() {
       }
 
       .metrics-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 14px;
-      }
+    position: relative;
+    z-index: 10;
+  }
+
+  .metric-item {
+    color: #ffffff;
+  }
+
+  .metric-icon {
+    color: #ffffff;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+  }
+
+  .metric-icon svg {
+    stroke: #ffffff;
+  }
+
+  .metric-details {
+    color: #ffffff;
+  }
+
+  .metric-value {
+    color: #ffffff !important;
+
+    font-weight: 700;
+
+    text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.9),
+      0 2px 5px rgba(0, 0, 0, 0.65);
+  }
+
+  .metric-label {
+    color: #ffffff !important;
+
+    text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.9),
+      0 2px 4px rgba(0, 0, 0, 0.6);
+  }
 
       .hero-right-col {
         width: 100%;
@@ -2674,11 +2715,11 @@ export default function CuroAidHero() {
             </a> */}
 
             <div className="hero-main-content">
-              <div className="pill-badge">
-                <span className="pill-dot"></span>
+              <div className="pill-badge hero-pill-badge">
+                <span className="pill-dot "></span>
                 BETTER CARE STARTS AT HOME
               </div>
-              <h1 className="hero-title">
+              <h1 className="hero-title hero-title-gradient">
                 Trusted Home
                 <span className="highlight-gradient">Healthcare Services</span>
               </h1>
@@ -3054,7 +3095,7 @@ export default function CuroAidHero() {
         <div className="video-modal-card">
           <button className="modal-close-btn" style={{ zIndex: 10, background: "rgba(255,255,255,0.8)" }}
             onClick={closeVideoModal}>&times;</button>
-          <div className="video-container">
+          {/* <div className="video-container">
             <iframe
               id="videoIframe"
               src={
@@ -3065,7 +3106,7 @@ export default function CuroAidHero() {
               allow="autoplay; encrypted-media"
               allowFullScreen
             />
-          </div>
+          </div> */}
         </div>
       </div>
 

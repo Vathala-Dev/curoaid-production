@@ -23,6 +23,7 @@ const testimonials = [
     location: "Chennai",
     text: "Outstanding physiotherapy sessions at home. The therapist helped my father recover quickly after surgery. Great service!",
   },
+  
 ];
 
 export default function TestimonialsSection() {
