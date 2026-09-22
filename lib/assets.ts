@@ -51,3 +51,5 @@ export const homedoc1 = `${assetPathPrefix}/homedoc1.webp`;
 export const oosi2 = `${assetPathPrefix}/oosi2.webp`;
 export const steth3= `${assetPathPrefix}/steth3.webp`;
 export const dog4 = `${assetPathPrefix}/dog4.webp`;
+
+export const nursebanner=`${assetPathPrefix}/nurse-banner.webp`;
