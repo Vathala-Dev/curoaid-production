@@ -8,7 +8,7 @@ import {
     imgStepIcon3,
     imgStepIcon4, tick, doctorImage, doctor1, doctor2, doctor3, doctor4, doctor5, doctor6, doctor7
 } from "@/lib/assets";
-import ServiceDesign, { ServiceData } from "./ServiceDesign";
+import ServiceDesign, { ServiceData } from "./servicedetailspage/ServiceDesign";
 
 
 const doctorAtHomeData: ServiceData = {

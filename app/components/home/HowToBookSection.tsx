@@ -137,6 +137,7 @@
 //         </section>
 //     );
 // }
+
 import Image, { type StaticImageData } from "next/image";
 
 import SectionBadge from "@/app/components/ui/SectionBadge";
@@ -169,7 +170,15 @@ export default function HowToBookSection(
     return (
         <section
             aria-labelledby="how-to-book-title"
-            className="relative px-3 py-6 sm:px-5 sm:py-10 lg:px-6 lg:py-14"
+            className="
+                relative
+                px-3
+                py-6
+                sm:px-5
+                sm:py-10
+                lg:px-6
+                lg:py-14
+            "
         >
             <div className="relative mx-auto w-full max-w-[1600px]">
 
@@ -177,10 +186,11 @@ export default function HowToBookSection(
                 <div
                     className="
                         relative
-                        min-h-[420px]
+                        min-h-[500px]
                         overflow-hidden
                         rounded-xl
-                        sm:min-h-[360px]
+                        sm:min-h-[380px]
+                        md:min-h-[390px]
                         lg:h-[300px]
                         lg:min-h-0
                     "
@@ -199,40 +209,51 @@ export default function HowToBookSection(
                     {/* Hero Content */}
                     <div
                         className="
-                            relative z-10
-                            px-5 py-6
-                            sm:px-8 sm:py-8
-                            lg:px-14 lg:py-6
+                            relative
+                            z-10
+                            px-5
+                            py-7
+                            sm:px-8
+                            sm:py-8
+                            md:px-10
+                            lg:px-14
+                            lg:py-6
                         "
                     >
                         <SectionBadge label={data.badge} />
 
                         <div
                             className="
-                                mt-3
-                                flex flex-col
-                                gap-5
+                                mt-4
+                                flex
+                                flex-col
+                                gap-6
+                                sm:mt-8 gap-7
                                 lg:flex-row
                                 lg:items-start
                                 lg:justify-between
                                 lg:gap-10
                             "
                         >
+                            {/* Title */}
                             <h2
                                 id="how-to-book-title"
                                 className="
+                                    w-full
                                     max-w-[560px]
-                                    text-[26px]
+                                    text-[25px]
                                     font-bold
-                                    leading-[1.15]
+                                    leading-[1.2]
                                     text-white
                                     sm:text-3xl
+                                    md:text-[34px]
                                     lg:text-[38px]
                                 "
                             >
                                 {data.title}
                             </h2>
 
+                            {/* Description + Button */}
                             <div
                                 className="
                                     flex
@@ -241,15 +262,17 @@ export default function HowToBookSection(
                                     flex-col
                                     items-start
                                     gap-4
+                                    sm:gap-5
                                     lg:items-end
                                     lg:pt-1
                                 "
                             >
                                 <p
                                     className="
+                                        w-full
                                         max-w-[440px]
                                         text-[13px]
-                                        leading-relaxed
+                                        leading-[1.6]
                                         text-white/90
                                         sm:text-sm
                                         lg:text-right
@@ -258,9 +281,11 @@ export default function HowToBookSection(
                                     {data.description}
                                 </p>
 
-                                <GradientButton
-                                    label={data.buttonLabel}
-                                />
+                                <div className="w-full sm:w-auto">
+                                    <GradientButton
+                                        label={data.buttonLabel}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -269,17 +294,22 @@ export default function HowToBookSection(
                 {/* Steps Card */}
                 <div
                     className="
-                        relative z-20
-                        mx-2 -mt-8
+                        relative
+                        z-20
+                        mx-2
+                        -mt-10
                         rounded-xl
-                        border border-gray-100
+                        border
+                        border-gray-100
                         bg-white
-                        px-4 py-5
+                        px-4
+                        py-6
                         shadow-[0_8px_30px_rgba(0,0,0,0.10)]
                         sm:mx-6
-                        sm:-mt-10
+                        sm:
                         sm:px-6
-                        sm:py-6
+                        sm:py-7
+                        md:mx-10
                         lg:mx-16
                         lg:-mt-12
                         lg:px-8
@@ -290,9 +320,11 @@ export default function HowToBookSection(
                         className="
                             grid
                             grid-cols-1
-                            gap-7
+                            gap-8
                             sm:grid-cols-2
-                            sm:gap-8
+                            sm:gap-y-9
+                            sm:gap-x-6
+                            md:gap-x-8
                             lg:grid-cols-4
                             lg:gap-0
                         "
@@ -303,10 +335,13 @@ export default function HowToBookSection(
                                 className="
                                     relative
                                     flex
+                                    min-w-0
                                     flex-col
                                     items-center
                                     px-3
                                     text-center
+                                    sm:px-4
+                                    lg:px-3
                                 "
                             >
                                 {/* Connector */}
@@ -329,9 +364,10 @@ export default function HowToBookSection(
                                 <div
                                     className="
                                         relative
-                                        mb-2
+                                        mb-3
                                         h-12
                                         w-12
+                                        shrink-0
                                         sm:h-14
                                         sm:w-14
                                     "
@@ -369,6 +405,7 @@ export default function HowToBookSection(
                                         py-1
                                         text-[9px]
                                         font-bold
+                                        leading-none
                                         text-white
                                     "
                                 >
@@ -379,6 +416,7 @@ export default function HowToBookSection(
                                 <h3
                                     className="
                                         mb-1
+                                        max-w-[240px]
                                         text-sm
                                         font-semibold
                                         leading-tight
@@ -391,9 +429,10 @@ export default function HowToBookSection(
                                 {/* Description */}
                                 <p
                                     className="
+                                        w-full
                                         max-w-[220px]
                                         text-[11px]
-                                        leading-[1.45]
+                                        leading-[1.5]
                                         text-[#555]
                                         sm:text-xs
                                     "
@@ -408,3 +447,4 @@ export default function HowToBookSection(
         </section>
     );
 }
+

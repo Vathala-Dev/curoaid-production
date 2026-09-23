@@ -1,5 +1,5 @@
 import { physiotherapyBanner, physiotherapyImage, physio1, physio2, physio3, physio4, physio5, physio6, physio7, physio8, physio9, tick, imgStepIcon1, imgStepIcon2, imgStepIcon3, imgStepIcon4 } from "@/lib/assets";
-import ServiceDesign, { ServiceData } from "./ServiceDesign";
+import ServiceDesign, { ServiceData } from "./servicedetailspage/ServiceDesign";
 
 const physiotherapyData: ServiceData = {
     hero: {
