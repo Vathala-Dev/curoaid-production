@@ -1,11 +1,22 @@
 import Image from "next/image";
 
-import {
-  imgCtaBanner,
-  imgVectorWhite,
-} from "@/lib/assets";
+import { imgVectorWhite } from "@/lib/assets";
 
-export default function CTABannerSection() {
+type CTA = {
+  ctabanner: string;
+  ctaTitle: string;
+  ctasubtitle?: string;
+  ctadescription?: React.ReactNode;
+  buttonlabel: string;
+};
+
+export default function CTABannerSection({
+  ctabanner,
+  ctaTitle,
+  ctasubtitle,
+  ctadescription,
+  buttonlabel,
+}: CTA) {
   return (
     <section
       aria-labelledby="cta-title"
@@ -14,7 +25,7 @@ export default function CTABannerSection() {
       {/* Background */}
       <div className="absolute inset-0">
         <Image
-          src={imgCtaBanner}
+          src={ctabanner}
           alt=""
           fill
           sizes="(max-width: 1024px) 100vw, calc(100vw - 6rem)"
@@ -30,20 +41,25 @@ export default function CTABannerSection() {
           id="cta-title"
           className="mx-auto mb-4 max-w-2xl text-3xl leading-tight font-bold text-white lg:text-[40px]"
         >
-          Your Health Deserves Care That Comes Home
+          {ctaTitle}
         </h2>
 
         <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-white/90">
-          It&apos;s emotional without being overly dramatic, and it naturally
-          reinforces CuroAid&apos;s{" "}
-          <strong className="font-bold">home healthcare</strong> positioning.
+          {ctasubtitle}
+
+          {ctadescription && (
+            <>
+              {" "}
+              {ctadescription}
+            </>
+          )}
         </p>
 
         <button
           type="button"
           className="inline-flex items-center gap-2 rounded-xl bg-[#4cc6f0] px-10 py-4 text-sm font-bold text-white shadow-lg transition-opacity hover:opacity-90"
         >
-          Book Free Consultation
+          {buttonlabel}
 
           <Image
             src={imgVectorWhite}

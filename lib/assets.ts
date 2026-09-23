@@ -53,3 +53,67 @@ export const steth3= `${assetPathPrefix}/steth3.webp`;
 export const dog4 = `${assetPathPrefix}/dog4.webp`;
 
 export const nursebanner=`${assetPathPrefix}/nurse-banner.webp`;
+
+
+//Nursing service page images
+
+export const r1 =`${assetPathPrefix}/r1.webp`
+
+export const l1=`${assetPathPrefix}/l1.webp`
+export const l2=`${assetPathPrefix}/l2.webp`
+export const l3=`${assetPathPrefix}/l3.webp`
+export const l4=`${assetPathPrefix}/l4.webp`
+export const l5=`${assetPathPrefix}/l5.webp`
+export const l6=`${assetPathPrefix}/l6.webp`
+export const l7=`${assetPathPrefix}/l7.webp`
+export const l8=`${assetPathPrefix}/l8.webp`
+export const l9=`${assetPathPrefix}/l9.webp`
+export const l10=`${assetPathPrefix}/l10.webp`
+export const l11=`${assetPathPrefix}/l11.webp`
+export const l12=`${assetPathPrefix}/l12.webp`
+export const tick=`${assetPathPrefix}/tick.png`
+export const doctorBanner=`${assetPathPrefix}/doctorBanner.webp`
+export const doctorImage=`${assetPathPrefix}/doctorImage.webp`
+export const doctor1=`${assetPathPrefix}/doctor1.webp`
+export const doctor2=`${assetPathPrefix}/doctor2.webp`
+export const doctor3=`${assetPathPrefix}/doctor3.webp`
+export const doctor4=`${assetPathPrefix}/doctor4.webp`
+export const doctor5=`${assetPathPrefix}/doctor5.webp`
+export const doctor6=`${assetPathPrefix}/doctor6.webp`
+export const doctor7=`${assetPathPrefix}/doctor7.webp`
+
+
+export const physiotherapyBanner=`${assetPathPrefix}/physiotherapyBanner.webp`
+
+export const physiotherapyImage=`${assetPathPrefix}/physiotherapyImage.webp`
+
+export const physio1=`${assetPathPrefix}/physio1.webp`
+
+export const physio2=`${assetPathPrefix}/physio2.webp`
+
+export const physio3=`${assetPathPrefix}/physio3.webp`
+export const physio4=`${assetPathPrefix}/physio4.webp`
+export const physio5=`${assetPathPrefix}/physio5.webp`
+export const physio6=`${assetPathPrefix}/physio6.webp`
+export const physio7=`${assetPathPrefix}/physio7.webp`
+export const physio8=`${assetPathPrefix}/physio8.webp`
+export const physio9=`${assetPathPrefix}/physio9.webp`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

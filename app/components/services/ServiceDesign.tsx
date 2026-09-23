@@ -1,8 +1,14 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import GradientButton from "../ui/GradientButton";
+import HowToBookSection from "../home/HowToBookSection";
+import WhyChooseSection from "../home/WhyChooseSection";
+import CTABannerSection from "../home/CTABAnnerSection";
+import FAQSection from "../home/FAQSection";
+import Navbar from "../home/Navbar";
+import Footer from "../home/Footer";
 
 export type ServiceData = {
     hero: {
@@ -40,7 +46,7 @@ export type ServiceData = {
     whyChoose: {
         badge: string;
         title: string;
-        description?: string;
+        description?: React.ReactNode;
         image: string;
         imageAlt: string;
         items: {
@@ -58,16 +64,17 @@ export type ServiceData = {
         imageAlt: string;
         button: string;
         steps: {
-            number: string;
+            num: string;
             title: string;
             description: string;
-            icon?: string;
+            icon: StaticImageData | string;
         }[];
     };
 
     cta: {
         title: string;
-        description: string;
+        subtitle?: string;
+        description?: string;
         image: string;
         imageAlt: string;
         button: string;
@@ -91,9 +98,12 @@ export default function ServiceDesign({
     data,
 }: ServiceDesignProps) {
     const [openFaq, setOpenFaq] = useState<number | null>(0);
+    console.log("ddddd", data.booking)
+    console.log("ddddd", data.whyChoose)
 
     return (
         <main className="w-full overflow-hidden bg-white">
+            <Navbar />
 
             {/* =====================================================
           HERO
@@ -361,13 +371,14 @@ export default function ServiceDesign({
                                 ))}
                         </div>
 
-                        <button
+                        {/* <button
                             type="button"
                             className="mt-5 rounded-lg bg-[#65c85c] px-6 py-3 text-xs font-bold text-white shadow-sm transition hover:bg-[#55b94d]"
                         >
                             {data.introduction.button}
                             <span className="ml-1">→</span>
-                        </button>
+                        </button> */}
+                        <GradientButton label="Book Now" />
 
                     </div>
                 </div>
@@ -405,16 +416,27 @@ export default function ServiceDesign({
 
                     {/* Cards */}
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-
                         {data.services.items.map((item, index) => (
                             <article
                                 key={`${item.title}-${index}`}
-                                className={`group overflow-hidden rounded-xl border border-gray-200 bg-[#f7f7f7] transition duration-300 hover:-translate-y-1 hover:shadow-lg ${item.featured
-                                    ? "bg-gradient-to-b from-[#4ccce3] to-[#62bd72] text-white"
-                                    : ""
-                                    }`}
+                                className="
+                group
+                overflow-hidden
+                rounded-xl
+                border border-gray-200
+                bg-[#f7f7f7]
+                text-black
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:border-transparent
+                hover:bg-gradient-to-b
+                hover:from-[#4ccce3]
+                hover:to-[#62bd72]
+                hover:text-white
+                hover:shadow-lg
+            "
                             >
-
                                 {/* Card image */}
                                 <div className="p-2">
                                     <div className="overflow-hidden rounded-lg">
@@ -423,36 +445,52 @@ export default function ServiceDesign({
                                             alt={item.imageAlt}
                                             width={500}
                                             height={300}
-                                            className="h-[175px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[155px]"
+                                            className="
+                            h-[175px]
+                            w-full
+                            object-cover
+                            transition-transform
+                            duration-500
+                            group-hover:scale-105
+                            sm:h-[155px]
+                        "
                                         />
                                     </div>
                                 </div>
 
                                 {/* Card content */}
                                 <div className="px-3 pb-4">
-
                                     <h3
-                                        className={`text-xs font-extrabold sm:text-sm ${item.featured
-                                            ? "text-white"
-                                            : "text-black"
-                                            }`}
+                                        className="
+                        text-xs
+                        font-extrabold
+                        text-black
+                        transition-colors
+                        duration-300
+                        group-hover:text-white
+                        sm:text-sm
+                    "
                                     >
                                         {item.title}
                                     </h3>
 
                                     <p
-                                        className={`mt-2 text-[10px] leading-4 sm:text-[11px] ${item.featured
-                                            ? "text-white/90"
-                                            : "text-gray-600"
-                                            }`}
+                                        className="
+                        mt-2
+                        text-[10px]
+                        leading-4
+                        text-gray-600
+                        transition-colors
+                        duration-300
+                        group-hover:text-white/90
+                        sm:text-[11px]
+                    "
                                     >
                                         {item.description}
                                     </p>
-
                                 </div>
                             </article>
                         ))}
-
                     </div>
                 </div>
             </section>
@@ -461,293 +499,48 @@ export default function ServiceDesign({
             {/* =====================================================
           WHY CHOOSE CUROAID
       ====================================================== */}
+            <WhyChooseSection
+                badge={data.whyChoose.badge}
+                title={data.whyChoose.title}
+                description={data.whyChoose.description}
+                image={data.whyChoose.image}
+                imageAlt={data.whyChoose.imageAlt}
+                items={data.whyChoose.items} />
 
-            <section className="px-5 py-14 sm:py-20 lg:px-10">
-
-                <div className="mx-auto max-w-[1000px]">
-
-                    {/* Heading */}
-                    <div className="mb-7">
-
-                        <span className="inline-flex rounded-full bg-[#dff8ff] px-3 py-1 text-[9px] font-bold uppercase tracking-wider text-[#36bddb]">
-                            {data.whyChoose.badge}
-                        </span>
-
-                        <h2 className="mt-2 text-2xl font-extrabold text-black sm:text-3xl">
-                            {data.whyChoose.title}
-                        </h2>
-
-                        {data.whyChoose.description && (
-                            <p className="mt-2 max-w-[650px] text-xs leading-5 text-gray-500">
-                                {data.whyChoose.description}
-                            </p>
-                        )}
-
-                    </div>
-
-
-                    {/* Content */}
-                    <div className="grid items-center gap-8 lg:grid-cols-[360px_1fr]">
-
-                        {/* Team image */}
-                        <div className="overflow-hidden rounded-xl">
-                            <Image
-                                src={data.whyChoose.image}
-                                alt={data.whyChoose.imageAlt}
-                                width={600}
-                                height={600}
-                                className="h-[330px] w-full object-cover sm:h-[400px]"
-                            />
-                        </div>
-
-
-                        {/* Benefits */}
-                        <div className="grid gap-5 sm:grid-cols-2">
-
-                            {data.whyChoose.items.map((item, index) => (
-                                <div
-                                    key={`${item.title}-${index}`}
-                                    className="flex gap-3"
-                                >
-
-                                    {/* Icon */}
-                                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#dff8e0] text-sm">
-                                        {item.icon || "✓"}
-                                    </div>
-
-                                    <div>
-
-                                        <h3 className="text-xs font-extrabold text-black sm:text-sm">
-                                            {item.title}
-                                        </h3>
-
-                                        <p className="mt-1 text-[10px] leading-4 text-gray-500 sm:text-[11px]">
-                                            {item.description}
-                                        </p>
-
-                                    </div>
-                                </div>
-                            ))}
-
-                        </div>
-
-                    </div>
-                </div>
-            </section>
 
 
             {/* =====================================================
           HOW TO BOOK
       ====================================================== */}
 
-            <section className="px-3 sm:px-5 lg:px-10">
-
-                <div className="relative mx-auto max-w-[1200px] overflow-hidden rounded-xl sm:rounded-2xl">
-
-                    {/* Background */}
-                    <Image
-                        src={data.booking.image}
-                        alt={data.booking.imageAlt}
-                        width={1600}
-                        height={600}
-                        className="h-[400px] w-full object-cover sm:h-[440px]"
-                    />
-
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/55" />
-
-                    {/* Top content */}
-                    <div className="absolute left-0 top-0 w-full px-7 py-8 text-white sm:px-12 sm:py-10">
-
-                        <div className="max-w-[500px]">
-
-                            <span className="inline-flex rounded-full bg-[#dff8ff] px-3 py-1 text-[9px] font-bold uppercase tracking-wider text-[#36bddb]">
-                                {data.booking.badge}
-                            </span>
-
-                            <h2 className="mt-2 text-2xl font-extrabold leading-tight sm:text-3xl">
-                                {data.booking.title}
-                            </h2>
-
-                            <p className="mt-3 max-w-[460px] text-xs leading-5 text-white/80">
-                                {data.booking.description}
-                            </p>
-
-                            <button
-                                type="button"
-                                className="mt-4 rounded-lg bg-[#65c85c] px-5 py-2.5 text-xs font-bold text-white"
-                            >
-                                {data.booking.button}
-                                <span className="ml-1">→</span>
-                            </button>
-
-                        </div>
-                    </div>
-
-
-                    {/* Booking steps */}
-                    <div className="absolute bottom-0 left-1/2 w-[92%] -translate-x-1/2 translate-y-1/2 rounded-xl bg-white shadow-xl">
-
-                        <div className="grid grid-cols-2 divide-x divide-gray-100 md:grid-cols-4">
-
-                            {data.booking.steps.map((step, index) => (
-                                <div
-                                    key={`${step.number}-${index}`}
-                                    className="px-3 py-5 text-center sm:px-5"
-                                >
-
-                                    {/* Icon */}
-                                    <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#65c85c] text-lg">
-                                        {step.icon || "●"}
-                                    </div>
-
-                                    <span className="mt-2 block text-[9px] font-bold text-[#37bfdc]">
-                                        Step {step.number}
-                                    </span>
-
-                                    <h3 className="mt-1 text-[11px] font-extrabold text-black">
-                                        {step.title}
-                                    </h3>
-
-                                    <p className="mt-1 text-[9px] leading-4 text-gray-500">
-                                        {step.description}
-                                    </p>
-
-                                </div>
-                            ))}
-
-                        </div>
-                    </div>
-
-                </div>
-
-                {/* Space for overlapping cards */}
-                <div className="h-28 sm:h-32" />
-
-            </section>
-
-
+            <HowToBookSection
+                badge={data.booking.badge}
+                title={data.booking.title}
+                description={data.booking.description}
+                buttonLabel={data.booking.button}
+                backgroundImage={data.booking.image}
+                steps={data.booking.steps}
+            />
             {/* =====================================================
           CTA
       ====================================================== */}
 
-            <section className="px-5 py-8 sm:py-12 lg:px-10">
 
-                <div className="relative mx-auto max-w-[840px] overflow-hidden rounded-xl">
-
-                    <Image
-                        src={data.cta.image}
-                        alt={data.cta.imageAlt}
-                        width={1200}
-                        height={450}
-                        className="h-[220px] w-full object-cover sm:h-[250px]"
-                    />
-
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-[#0078a8]/75" />
-
-                    <div className="absolute inset-0 flex items-center justify-center px-5 text-center text-white">
-
-                        <div>
-
-                            <h2 className="text-xl font-extrabold sm:text-2xl">
-                                {data.cta.title}
-                            </h2>
-
-                            <p className="mt-2 text-xs text-white/90">
-                                {data.cta.description}
-                            </p>
-
-                            <button
-                                type="button"
-                                className="mt-4 rounded-lg bg-[#48cce9] px-6 py-2.5 text-xs font-bold text-white shadow-md transition hover:bg-[#35bad8]"
-                            >
-                                {data.cta.button}
-                                <span className="ml-1">→</span>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
+            <CTABannerSection ctabanner={data.cta.image}
+                ctaTitle={data.cta.title}
+                ctasubtitle={data.cta.subtitle}
+                ctadescription={data.cta.description}
+                buttonlabel={data.cta.button} />
             {/* =====================================================
           FAQ
       ====================================================== */}
 
-            <section className="px-5 py-14 sm:py-20 lg:px-10">
 
-                <div className="mx-auto max-w-[850px]">
+            <FAQSection badge={data.faq.badge}
+                title={data.faq.title}
+                items={data.faq.items} />
 
-                    <span className="inline-flex rounded-full bg-[#dff8ff] px-3 py-1 text-[9px] font-bold uppercase tracking-wider text-[#36bddb]">
-                        {data.faq.badge}
-                    </span>
-
-                    <h2 className="mt-2 text-2xl font-extrabold text-black sm:text-3xl">
-                        {data.faq.title}
-                    </h2>
-
-
-                    <div className="mt-7 divide-y divide-gray-200 border-y border-gray-200">
-
-                        {data.faq.items.map((faq, index) => {
-                            const isOpen = openFaq === index;
-
-                            return (
-                                <div key={`${faq.question}-${index}`}>
-
-                                    <button
-                                        type="button"
-                                        onClick={() =>
-                                            setOpenFaq(isOpen ? null : index)
-                                        }
-                                        className="flex w-full items-center justify-between gap-5 py-5 text-left"
-                                        aria-expanded={isOpen}
-                                    >
-
-                                        <span className="text-xs font-bold text-black sm:text-sm">
-                                            {faq.question}
-                                        </span>
-
-                                        <span
-                                            className={`text-lg transition-transform duration-300 ${isOpen ? "rotate-180" : ""
-                                                }`}
-                                        >
-                                            ⌄
-                                        </span>
-
-                                    </button>
-
-
-                                    <div
-                                        className={`grid transition-all duration-300 ${isOpen
-                                            ? "grid-rows-[1fr] pb-5 opacity-100"
-                                            : "grid-rows-[0fr] opacity-0"
-                                            }`}
-                                    >
-                                        <div className="overflow-hidden">
-
-                                            <p className="max-w-[750px] text-xs leading-5 text-gray-500">
-                                                {faq.answer}
-                                            </p>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            );
-                        })}
-
-                    </div>
-
-                </div>
-
-            </section>
-
+            <Footer />
         </main>
     );
 }
