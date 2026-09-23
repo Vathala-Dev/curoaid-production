@@ -312,10 +312,10 @@ const services = [
     { name: "Elder Care", href: "/elder-care" },
     { name: "Veterinary Services", href: "/veterinary-care" },
     { name: "Physiotherapy", href: "/physiotherapy" },
-    { name: "Yoga", href: "/yoga" },
-    { name: "NRI Patient Care", href: "/nri-patient-care" },
-    { name: "Hospital Equipment", href: "/hospital-equipment" },
-    { name: "Renal Blood Test", href: "/renal-blood-test" },
+    { name: "Yoga", href: "/yoga-at-home" },
+    { name: "NRI Patient Care", href: "/nri-elder-care" },
+    { name: "Hospital Equipment", href: "/medical-equipment-rental" },
+    { name: "Renal Blood Test", href: "/blood-test-at-home" },
 ];
 
 export default function Navbar() {
@@ -362,8 +362,8 @@ export default function Navbar() {
                     href="/"
                     onClick={closeMobileMenu}
                     className={`flex min-w-0 items-center gap-2 transition-all duration-300 ease-in-out sm:gap-3 lg:gap-4 ${scrolled
-                            ? "max-sm:pointer-events-none max-sm:-translate-x-4 max-sm:opacity-0"
-                            : "translate-x-0 opacity-100"
+                        ? "max-sm:pointer-events-none max-sm:-translate-x-4 max-sm:opacity-0"
+                        : "translate-x-0 opacity-100"
                         }`}
                 >
                     <div className="relative h-[52px] w-[52px] shrink-0 overflow-hidden rounded-[10px] sm:h-[60px] sm:w-[60px] lg:h-[72px] lg:w-[72px]">

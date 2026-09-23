@@ -2,13 +2,13 @@
 
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
-import GradientButton from "../ui/GradientButton";
-import HowToBookSection from "../home/HowToBookSection";
-import WhyChooseSection from "../home/WhyChooseSection";
-import CTABannerSection from "../home/CTABAnnerSection";
-import FAQSection from "../home/FAQSection";
-import Navbar from "../home/Navbar";
-import Footer from "../home/Footer";
+import GradientButton from "../../ui/GradientButton";
+import HowToBookSection from "../../home/HowToBookSection";
+import WhyChooseSection from "../../home/WhyChooseSection";
+import CTABannerSection from "../../home/CTABAnnerSection";
+import FAQSection from "../../home/FAQSection";
+import Navbar from "../../home/Navbar";
+import Footer from "../../home/Footer";
 
 export type ServiceData = {
     hero: {

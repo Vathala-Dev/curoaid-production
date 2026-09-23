@@ -1,4 +1,4 @@
-import ServiceDesign, { ServiceData, } from "./ServiceDesign";
+import ServiceDesign, { ServiceData, } from "./servicedetailspage/ServiceDesign";
 import { l12, l10, l11, l2, l3, l4, l5, l6, l8, l9, nursebanner, r1, l1, imgWhyChoose, tick } from "@/lib/assets";
 import {
   imgStepIcon1,
