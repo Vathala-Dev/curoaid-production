@@ -11,6 +11,7 @@ import BlogsSection from "./components/home/BlogsSection";
 import CTABannerSection from "./components/home/CTABAnnerSection";
 import FAQSection from "./components/home/FAQSection";
 import Footer from "./components/home/Footer";
+import { homeCTA, homeFAQ, homeHowToBook, homeWhyChoose } from "./components/home/homehowtobook";
 
 
 
@@ -18,19 +19,17 @@ export default function Home() {
   return (
     <div className="bg-white min-h-screen w-full">
 
+      <Navbar />
       <main>
-        <Navbar/>
-
-
         <CuroAidHero />
         <WhoWeAreSection />
         <ServicesSection />
-        <HowToBookSection />
-        <WhyChooseSection />
+        <HowToBookSection {...homeHowToBook} />
+        <WhyChooseSection {...homeWhyChoose} />
         <TestimonialsSection />
         <BlogsSection />
-        <CTABannerSection />
-        <FAQSection />
+        <CTABannerSection {...homeCTA} />
+        <FAQSection{...homeFAQ} />
       </main>
       <Footer />
     </div>

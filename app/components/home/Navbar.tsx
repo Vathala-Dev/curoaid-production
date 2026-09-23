@@ -306,7 +306,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import GradientButton from "../ui/GradientButton";
 
 const services = [
-    { name: "Home Doctor Services", href: "/doctor-visit-at-home" },
+    { name: "Home Doctor Services", href: "/doctor-at-home" },
     { name: "Nursing Services", href: "/nursing-care" },
     { name: "Wound Care Services", href: "/wound-care" },
     { name: "Elder Care", href: "/elder-care" },

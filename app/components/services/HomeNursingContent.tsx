@@ -1,5 +1,12 @@
-import ServiceDesign, { ServiceData,} from "./ServiceDesign";
-import { nursebanner } from "@/lib/assets";
+import ServiceDesign, { ServiceData, } from "./ServiceDesign";
+import { l12, l10, l11, l2, l3, l4, l5, l6, l8, l9, nursebanner, r1, l1, imgWhyChoose, tick } from "@/lib/assets";
+import {
+  imgStepIcon1,
+  imgStepIcon2,
+  imgStepIcon3,
+  imgStepIcon4,
+} from "@/lib/assets";
+
 const homeNursingData: ServiceData = {
   hero: {
     badge: "Professional Nursing Care, Right at Your Doorstep",
@@ -15,7 +22,7 @@ const homeNursingData: ServiceData = {
     title: "Curoaid Home Nursing Service",
     description:
       "At Curoaid, we provide reliable and compassionate nursing care at home for elderly patients, post-surgical recovery, chronic conditions and more.",
-    image: nursebanner,
+    image: r1,
     imageAlt: "CuroAid home nursing",
     button: "Book Now",
   },
@@ -31,7 +38,7 @@ const homeNursingData: ServiceData = {
         description:
           "Compassionate nursing support for seniors who need ongoing assistance.",
         image:
-          nursebanner,
+          l3,
         imageAlt: "Elderly nursing care",
       },
 
@@ -40,7 +47,66 @@ const homeNursingData: ServiceData = {
         description:
           "Reliable professional nursing assistance during recovery.",
         image:
-          nursebanner,
+          l4,
+        imageAlt: "Post hospitalisation care",
+        featured: true,
+      },
+      {
+        title: "Post-Hospitalisation Nursing Care",
+        description:
+          "Reliable professional nursing assistance during recovery.",
+        image:
+          l5,
+        imageAlt: "Post hospitalisation care",
+        featured: true,
+      },
+      {
+        title: "Post-Hospitalisation Nursing Care",
+        description:
+          "Reliable professional nursing assistance during recovery.",
+        image:
+          l6,
+        imageAlt: "Post hospitalisation care",
+        featured: true,
+      }, {
+        title: "Post-Hospitalisation Nursing Care",
+        description:
+          "Reliable professional nursing assistance during recovery.",
+        image:
+          l8,
+        imageAlt: "Post hospitalisation care",
+        featured: true,
+      }, {
+        title: "Post-Hospitalisation Nursing Care",
+        description:
+          "Reliable professional nursing assistance during recovery.",
+        image:
+          l9,
+        imageAlt: "Post hospitalisation care",
+        featured: true,
+      }, {
+        title: "Post-Hospitalisation Nursing Care",
+        description:
+          "Reliable professional nursing assistance during recovery.",
+        image:
+          l10,
+        imageAlt: "Post hospitalisation care",
+        featured: true,
+      }, {
+        title: "Post-Hospitalisation Nursing Care",
+        description:
+          "Reliable professional nursing assistance during recovery.",
+        image:
+          l11,
+        imageAlt: "Post hospitalisation care",
+        featured: true,
+      },
+      {
+        title: "Post-Hospitalisation Nursing Care",
+        description:
+          "Reliable professional nursing assistance during recovery.",
+        image:
+          l12,
         imageAlt: "Post hospitalisation care",
         featured: true,
       },
@@ -52,41 +118,61 @@ const homeNursingData: ServiceData = {
   whyChoose: {
     badge: "WHY CHOOSE",
     title: "Why Choose Curoaid?",
-    description:
-      "Healthcare that comes to you.",
-    image:
-      nursebanner,
+    description: (
+      <>
+        At CuroAid, we believe healthcare should be more than just a
+        service — it should provide{" "}
+        <strong className="font-semibold text-black">
+          comfort, trust, dignity, and peace of mind.
+        </strong>{" "}
+        Our home healthcare services are designed to bring professional
+        care closer to patients while making the experience easier for
+        families.
+      </>
+    ),
+    image: "https://vathala-bucket.s3.ap-south-1.amazonaws.com/1790157754246/l2.webp",
     imageAlt: "CuroAid healthcare team",
     items: [
       {
         title: "Nursing Support",
         description:
           "Experienced nursing professionals providing reliable home care.",
+        icon: tick
       },
       {
         title: "Professional Care",
         description:
           "Qualified professionals focused on safe and personalized care.",
+        icon: tick
+
       },
       {
         title: "Home Environment",
         description:
           "Receive healthcare support in the comfort of your own home.",
+        icon: tick
+
       },
       {
         title: "Support for Recovery",
         description:
           "Continuous support throughout your recovery journey.",
+        icon: tick
+
       },
       {
         title: "Care for Elderly",
         description:
           "Dedicated support for seniors requiring assistance.",
+        icon: tick
+
       },
       {
         title: "Convenient & Reliable",
         description:
           "Flexible home healthcare support around your needs.",
+        icon: tick
+
       },
     ],
   },
@@ -102,28 +188,28 @@ const homeNursingData: ServiceData = {
     button: "Book a Service",
     steps: [
       {
-        number: "01",
-        title: "Sign Up",
-        description:
-          "Register your account and provide basic information.",
+        num: "01",
+        title: "Choose Nursing Service",
+        description: "Select the home nursing service that matches your patient's care requirements.",
+        icon: imgStepIcon1,
       },
       {
-        number: "02",
-        title: "Choose Your Service",
-        description:
-          "Select the home healthcare service you need.",
+        num: "02",
+        title: "Share Patient Details",
+        description: "Tell us about the patient's condition, care needs, preferred date, time, and location.",
+        icon: imgStepIcon2,
       },
       {
-        number: "03",
-        title: "Select Date & Time",
-        description:
-          "Choose your preferred date and time.",
+        num: "03",
+        title: "Speak With Our Team",
+        description: "Our care team will contact you, understand your requirements, and guide you through the next steps.",
+        icon: imgStepIcon3,
       },
       {
-        number: "04",
-        title: "Confirm Booking",
-        description:
-          "Review and confirm your appointment.",
+        num: "04",
+        title: "Get Nursing Care at Home",
+        description: "We arrange the appropriate nursing professional and provide care at your doorstep.",
+        icon: imgStepIcon4,
       },
     ],
   },
