@@ -29,7 +29,7 @@ export default function Home() {
         <TestimonialsSection />
         <BlogsSection />
         <CTABannerSection {...homeCTA} />
-        <FAQSection{...homeFAQ} />
+        <FAQSection {...homeFAQ} />
       </main>
       <Footer />
     </div>
