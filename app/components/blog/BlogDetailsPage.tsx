@@ -12,6 +12,7 @@ import type {
     BlogFAQ,
 } from "@/lib/blogs";
 import GradientButton from "../ui/GradientButton";
+import FAQSection from "../home/FAQSection";
 
 /* =========================================================
    PROPS
@@ -99,8 +100,7 @@ export default function BlogDetailsPage({
     relatedBlogs,
 }: BlogDetailsPageProps) {
 
-    const [openFaq, setOpenFaq] =
-        useState(0);
+    const [openFaq, setOpenFaq] = useState(0);
 
     const faqs =
         blog.faqList &&
@@ -212,54 +212,55 @@ export default function BlogDetailsPage({
 
                         <div
                             className="
-                                blog-content
-                                text-[10px]
-                                leading-[1.8]
-                                text-[#555]
-                                sm:text-[11px]
+                                    blog-content
+                                    text-[14px]
+                                    leading-[1.8]
+                                    text-[#555]
+                                    lg:text-[16px]
 
-                                [&_h1]:mb-3
-                                [&_h1]:mt-6
-                                [&_h1]:text-[20px]
-                                [&_h1]:font-bold
-                                [&_h1]:leading-[1.3]
-                                [&_h1]:text-[#111]
+                                    [&_h1]:mb-4
+                                    [&_h1]:mt-8
+                                    [&_h1]:text-[24px]
+                                    [&_h1]:font-bold
+                                    [&_h1]:leading-[1.35]
+                                    [&_h1]:text-[#111]
 
-                                [&_h2]:mb-3
-                                [&_h2]:mt-6
-                                [&_h2]:text-[18px]
-                                [&_h2]:font-bold
-                                [&_h2]:leading-[1.3]
-                                [&_h2]:text-[#111]
+                                    [&_h2]:mb-4
+                                    [&_h2]:mt-8
+                                    [&_h2]:text-[21px]
+                                    [&_h2]:font-bold
+                                    [&_h2]:leading-[1.4]
+                                    [&_h2]:text-[#111]
 
-                                [&_h3]:mb-2
-                                [&_h3]:mt-5
-                                [&_h3]:text-[15px]
-                                [&_h3]:font-bold
-                                [&_h3]:text-[#111]
+                                    [&_h3]:mb-3
+                                    [&_h3]:mt-6
+                                    [&_h3]:text-[18px]
+                                    [&_h3]:font-bold
+                                    [&_h3]:leading-[1.4]
+                                    [&_h3]:text-[#111]
 
-                                [&_p]:mb-4
+                                    [&_p]:mb-5
 
-                                [&_ul]:mb-4
-                                [&_ul]:list-disc
-                                [&_ul]:pl-5
+                                    [&_ul]:mb-5
+                                    [&_ul]:list-disc
+                                    [&_ul]:pl-6
 
-                                [&_ol]:mb-4
-                                [&_ol]:list-decimal
-                                [&_ol]:pl-5
+                                    [&_ol]:mb-5
+                                    [&_ol]:list-decimal
+                                    [&_ol]:pl-6
 
-                                [&_li]:mb-1
+                                    [&_li]:mb-2
 
-                                [&_strong]:font-semibold
-                                [&_strong]:text-[#222]
+                                    [&_strong]:font-semibold
+                                    [&_strong]:text-[#222]
 
-                                [&_a]:text-[#43c4e3]
-                                [&_a]:underline
+                                    [&_a]:text-[#43c4e3]
+                                    [&_a]:underline
 
-                                [&_img]:my-5
-                                [&_img]:rounded-xl
-                                [&_img]:max-w-full
-                            "
+                                    [&_img]:my-6
+                                    [&_img]:rounded-xl
+                                    [&_img]:max-w-full
+                                "
                             dangerouslySetInnerHTML={{
                                 __html:
                                     blog.content ||
@@ -311,7 +312,7 @@ export default function BlogDetailsPage({
                                             >
 
                                                 <Link
-                                                    href={`/blog/${relatedBlog.slug}`}
+                                                    href={`/blogs/${relatedBlog.slug}`}
                                                     className="relative block h-[125px] overflow-hidden rounded-[8px]"
                                                 >
 
@@ -345,7 +346,7 @@ export default function BlogDetailsPage({
                                                     </p>
 
                                                     <Link
-                                                        href={`/blog/${relatedBlog.slug}`}
+                                                        href={`/blogs/${relatedBlog.slug}`}
                                                         className="mt-2 inline-flex items-center gap-1 text-[8px] font-semibold text-[#43c4e3]"
                                                     >
                                                         Read More
@@ -425,85 +426,12 @@ export default function BlogDetailsPage({
 
             <section className="px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
 
-                <div className="mx-auto max-w-[920px]">
 
-                    <span className="inline-flex rounded-full bg-[#dff8ff] px-3 py-1 text-[9px] font-semibold tracking-wide text-[#42c4e6]">
-                        FAQ
-                    </span>
-
-                    <h2 className="mt-2 text-[23px] font-bold tracking-[-0.5px] sm:text-[27px]">
-                        Frequently asked questions
-                    </h2>
-
-                    <div className="mt-5">
-
-                        {faqs.map(
-                            (faq, index) => {
-
-                                const isOpen =
-                                    openFaq ===
-                                    index;
-
-                                return (
-                                    <div
-                                        key={
-                                            faq._id ||
-                                            `${faq.question}-${index}`
-                                        }
-                                        className="border-b border-[#dedede]"
-                                    >
-
-                                        <button
-                                            type="button"
-                                            onClick={() =>
-                                                setOpenFaq(
-                                                    isOpen
-                                                        ? -1
-                                                        : index
-                                                )
-                                            }
-                                            className="flex w-full items-center justify-between py-4 text-left"
-                                        >
-
-                                            <span className="pr-5 text-[10px] font-semibold text-[#111] sm:text-[11px]">
-                                                {
-                                                    faq.question
-                                                }
-                                            </span>
-
-                                            <span
-                                                className={[
-                                                    "flex h-5 w-5 shrink-0 items-center justify-center text-[15px] transition-transform",
-                                                    isOpen
-                                                        ? "rotate-180"
-                                                        : "",
-                                                ].join(
-                                                    " "
-                                                )}
-                                            >
-                                                ⌄
-                                            </span>
-
-                                        </button>
-
-                                        {isOpen && (
-
-                                            <div className="pb-4 pr-8 text-[9px] leading-[1.7] text-[#666] sm:text-[10px]">
-                                                {
-                                                    faq.answer
-                                                }
-                                            </div>
-
-                                        )}
-
-                                    </div>
-                                );
-                            }
-                        )}
-
-                    </div>
-
-                </div>
+                <FAQSection
+                    badge="FAQ"
+                    title="Frequently asked questions"
+                    items={faqs}
+                />
 
             </section>
 

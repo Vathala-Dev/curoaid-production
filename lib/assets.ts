@@ -211,6 +211,11 @@ export const equipment6 = `${assetPathPrefix}/equipment6.webp`;
 export const equipment7 = `${assetPathPrefix}/equipment7.webp`;
 export const equipment8 = `${assetPathPrefix}/equipment8.webp`;
 
+export const blogBanner = `${assetPathPrefix}/blogBanner.webp`;
+
+export const blogCTA = `${assetPathPrefix}/blogCTA.webp`;
+
+
 
 
 

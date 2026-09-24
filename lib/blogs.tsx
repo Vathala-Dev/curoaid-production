@@ -28,12 +28,46 @@ export type Blog = {
    GET ALL BLOGS
 ========================================================= */
 
+// export async function getBlogs(): Promise<Blog[]> {
+//     const response = await fetch(
+//         `${API_BASE_URL}/users/getAllBlogs`,
+//         {
+//             cache: "no-store",
+//         }
+//     );
+
+//     if (!response.ok) {
+//         throw new Error(
+//             `Blog API request failed: ${response.status}`
+//         );
+//     }
+
+//     const result = await response.json();
+
+//     if (!Array.isArray(result?.data)) {
+//         return [];
+//     }
+
+//     return result.data.filter(
+//         (blog: Blog) =>
+//             blog.isActive !== false
+//     );
+// }
 export async function getBlogs(): Promise<Blog[]> {
+    const start = Date.now();
     const response = await fetch(
         `${API_BASE_URL}/users/getAllBlogs`,
         {
-            cache: "no-store",
+            next: {
+                revalidate: 300,
+            },
         }
+    );
+
+    console.log(
+        "BLOG API TIME:",
+        Date.now() - start,
+        "ms"
     );
 
     if (!response.ok) {
@@ -43,13 +77,16 @@ export async function getBlogs(): Promise<Blog[]> {
     }
 
     const result = await response.json();
-
+    console.log(
+        "BLOG JSON PARSE TOTAL:",
+        Date.now() - start,
+        "ms"
+    );
     if (!Array.isArray(result?.data)) {
         return [];
     }
 
     return result.data.filter(
-        (blog: Blog) =>
-            blog.isActive !== false
+        (blog: Blog) => blog.isActive !== false
     );
 }
