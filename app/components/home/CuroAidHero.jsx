@@ -1939,7 +1939,7 @@ export default function CuroAidHero({
             <div className="video-container">
               <iframe
                 title="Our Story"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&enablejsapi=1"
+                src="https://www.youtube-nocookie.com/embed/_vT2EidDgqs?autoplay=1&mute=0"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
               />

@@ -361,10 +361,12 @@ export default function Navbar() {
                 <Link
                     href="/"
                     onClick={closeMobileMenu}
-                    className={`flex min-w-0 items-center gap-2 transition-all duration-300 ease-in-out sm:gap-3 lg:gap-4 ${scrolled
-                        ? "max-sm:pointer-events-none max-sm:-translate-x-4 max-sm:opacity-0"
-                        : "translate-x-0 opacity-100"
-                        }`}
+                    className={`flex min-w-0 items-center gap-2 transition-all duration-300 ease-in-out sm:gap-3 lg:gap-4 
+                        ${scrolled
+                            ? "max-md:pointer-events-none max-md:-translate-x-8 max-md:opacity-0"
+                            : ""
+                        }`
+                    }
                 >
                     <div className="relative h-[52px] w-[52px] shrink-0 overflow-hidden rounded-[10px] sm:h-[60px] sm:w-[60px] lg:h-[72px] lg:w-[72px]">
                         <Image
