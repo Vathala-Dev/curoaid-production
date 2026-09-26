@@ -310,7 +310,7 @@ const services = [
     { name: "Nursing Services", href: "/nursing-care" },
     { name: "Wound Care Services", href: "/wound-care" },
     { name: "Elder Care", href: "/elder-care" },
-    { name: "Veterinary Services", href: "/veterinary-care" },
+    { name: "Veterinary Services", href: "/veterinary-doctor-home-visit" },
     { name: "Physiotherapy", href: "/physiotherapy" },
     { name: "Yoga", href: "/yoga-at-home" },
     { name: "NRI Patient Care", href: "/nri-elder-care" },
