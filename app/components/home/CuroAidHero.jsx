@@ -1930,7 +1930,7 @@ export default function CuroAidHero({
             <button
               type="button"
               className="modal-close-btn"
-              style={{ zIndex: 10 }}
+              style={{ zIndex: 10, background: 'rgba(255,255,255,0.8)' }}
               onClick={closeVideoModal}
               aria-label="Close"
             >
@@ -1973,27 +1973,15 @@ export default function CuroAidHero({
           color: #0b1a30;
         }
 
-        // .hero-bg-video {
-        //   position: absolute;
-        //   inset: 0;
-        //   width: 100%;
-        //   height: 100%;
-        //   object-fit: cover;
-        //   object-position: center center;
-        //   z-index: 0;
-        // }
         .hero-bg-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  /* Move video content slightly to the left */
- object-position: 80% center;
-
-  z-index: 0;
-}
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          z-index: 0;
+        }
 
         // .hero-bg-scrim {
         //   position: absolute;
