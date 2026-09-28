@@ -1,13 +1,13 @@
 import Image from "next/image";
 
 import SectionBadge from "../ui/SectionBadge";
-import { imgDoctorAtHome,imgDoctorIcon,imgHomeNursing,imgGroup38,imgPhysiotherapy,imgPhysioIcon } from "@/lib/assets";
+import { imgDoctorAtHome, imgDoctorIcon, imgHomeNursing, imgGroup38, imgPhysiotherapy, imgPhysioIcon, woundCareImage, bloodTestImage, nriElderCareImage, elderCareImage, veterinaryImage, yogaImage, medicalEquipmentImage } from "@/lib/assets";
 
 
 
 
 
-const services = [
+    const services = [
     {
         title: "Doctor at Home",
         subtitle:
@@ -18,7 +18,7 @@ const services = [
     {
         title: "Home Nursing Services",
         subtitle:
-            "Professional medical consultation and care delivered conveniently at your doorstep.",
+            "Professional nursing care and medical support delivered conveniently at your doorstep.",
         image: imgHomeNursing,
         icon: imgGroup38,
     },
@@ -29,7 +29,57 @@ const services = [
         image: imgPhysiotherapy,
         icon: imgPhysioIcon,
     },
+    {
+        title: "Wound Care Services",
+        subtitle:
+            "Expert wound care and dressing services to support safe and effective healing at home.",
+        image: woundCareImage,
+        icon: imgPhysioIcon,
+    },
+    {
+        title: "Elder Care",
+        subtitle:
+            "Compassionate and personalized care services to support the comfort and well-being of seniors at home.",
+        image: elderCareImage,
+        icon: imgPhysioIcon,
+    },
+    {
+        title: "Veterinary Services",
+        subtitle:
+            "Convenient veterinary consultation and healthcare services for your pets at home.",
+        image: veterinaryImage,
+        icon: imgPhysioIcon,
+    },
+    {
+        title: "Yoga at Home",
+        subtitle:
+            "Personalized yoga sessions at home to support flexibility, relaxation, fitness, and overall well-being.",
+        image: yogaImage,
+        icon: imgPhysioIcon,
+    },
+    {
+        title: "NRI Patient Care",
+        subtitle:
+            "Reliable healthcare support for your loved ones in India, with personalized assistance and regular care.",
+        image: nriElderCareImage,
+        icon: imgPhysioIcon,
+    },
+    {
+        title: "Hospital Equipment",
+        subtitle:
+            "Quality medical equipment available for rental or purchase to support comfortable care at home.",
+        image: medicalEquipmentImage,
+        icon: imgPhysioIcon,
+    },
+    {
+        title: "Blood Test at Home",
+        subtitle:
+            "Convenient blood sample collection at home for renal health monitoring and diagnostic testing.",
+        image: bloodTestImage,
+        icon: imgPhysioIcon,
+    },
 ];
+
 
 export default function ServicesSection() {
     return (
