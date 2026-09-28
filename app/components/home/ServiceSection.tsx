@@ -7,20 +7,20 @@ import { imgDoctorAtHome, imgDoctorIcon, imgHomeNursing, imgGroup38, imgPhysioth
 
 
 
-    const services = [
+const services = [
     {
         title: "Doctor at Home",
         subtitle:
             "Professional medical consultation and care at your doorstep.",
         image: imgDoctorAtHome,
-        icon: imgDoctorIcon,
+        icon: imgPhysioIcon,
     },
     {
         title: "Home Nursing Services",
         subtitle:
             "Professional nursing care and medical support delivered conveniently at your doorstep.",
         image: imgHomeNursing,
-        icon: imgGroup38,
+        icon: imgPhysioIcon,
     },
     {
         title: "Physiotherapy at Home",
@@ -89,7 +89,6 @@ export default function ServicesSection() {
                 {/* Section Header */}
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-12">
 
-                    {/* Left Content */}
                     <div>
                         <SectionBadge label="Services" />
 
@@ -100,7 +99,6 @@ export default function ServicesSection() {
                         </h2>
                     </div>
 
-                    {/* Right Content */}
                     <div className="lg:max-w-sm lg:pt-4 lg:text-right">
                         <p className="text-black text-[18px] leading-relaxed mb-2 font-semibold">
                             Complete Care, Designed Around Your Needs
@@ -113,56 +111,141 @@ export default function ServicesSection() {
                     </div>
                 </div>
 
-                {/* Services Cards */}
+                {/* Services */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {services.map((service) => (
                         <div
                             key={service.title}
-                            className="relative rounded-2xl overflow-hidden shadow-md h-[380px] group"
+                            className="
+                        relative
+                        h-[380px]
+                        rounded-2xl
+                        overflow-hidden
+                        shadow-md
+                        group
+                        cursor-pointer
+                    "
                         >
-                            {/* Service Image */}
+                            {/* Image */}
                             <Image
                                 src={service.image}
                                 alt={service.title}
                                 fill
-                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                sizes="
+                            (max-width: 768px) 100vw,
+                            (max-width: 1024px) 50vw,
+                            33vw
+                        "
+                                className="
+                            object-cover
+                            transition-transform
+                            duration-700
+                            ease-out
+                            group-hover:scale-105
+                        "
                             />
 
-                            {/* Bottom Service Info */}
+                            {/* Hover Content */}
                             <div
                                 className="
-                  absolute
-                  bottom-4
-                  left-4
-                  right-4
-                  flex
-                  items-center
-                  gap-3
-                  px-4
-                  py-3
-                  rounded-full
-                "
-                                style={{
-                                    background: "rgba(68, 68, 68, 0.66)",
-                                    backdropFilter: "blur(5px)",
-                                    border: "1px solid rgba(226, 216, 216, 0.24)",
-                                }}
-                            >
-                                {/* Service Icon */}
-                                <Image
-                                    src={service.icon}
-                                    alt=""
-                                    width={40}
-                                    height={40}
-                                    className="w-10 h-10 flex-shrink-0 object-contain"
-                                    aria-hidden="true"
-                                />
+                            absolute
+                            left-4
+                            right-4
+                            bottom-4
 
-                                {/* Service Title */}
-                                <span className="text-white text-base font-bold">
-                                    {service.title}
-                                </span>
+                            h-[68px]
+                            group-hover:h-[150px]
+
+                            rounded-2xl
+                            overflow-hidden
+
+                            bg-black/55
+                            backdrop-blur-sm
+
+                            border
+                            border-white/20
+
+                            transition-all
+                            duration-500
+                            ease-out
+                        "
+                            >
+
+                                {/* Title */}
+                                <div className="h-[68px] flex items-center gap-3 px-4">
+
+                                    <div
+                                        className="
+                                    w-10
+                                    h-10
+                                    flex-shrink-0
+                                    flex
+                                    items-center
+                                    justify-center
+                                    rounded-full
+                                    bg-white/10
+
+                                    transition-all
+                                    duration-500
+
+                                    group-hover:bg-white/20
+                                    group-hover:scale-105
+                                "
+                                    >
+                                        <Image
+                                            src={service.icon}
+                                            alt=""
+                                            width={40}
+                                            height={40}
+                                            className="w-10 h-10 object-contain"
+                                            aria-hidden="true"
+                                        />
+                                    </div>
+
+                                    <span
+                                        className="
+                                    text-white
+                                    text-base
+                                    font-bold
+
+                                    transition-transform
+                                    duration-500
+
+                                    group-hover:translate-x-1
+                                "
+                                    >
+                                        {service.title}
+                                    </span>
+
+                                </div>
+
+                                {/* Description */}
+                                <div
+                                    className="
+                                px-4
+                                opacity-0
+                                translate-y-3
+
+                                transition-all
+                                duration-500
+                                ease-out
+
+                                group-hover:opacity-100
+                                group-hover:translate-y-0
+                            "
+                                >
+                                    <p
+                                        className="
+                                    text-white/90
+                                    text-sm
+                                    leading-relaxed
+                                    line-clamp-3
+                                "
+                                    >
+                                        {service.subtitle}
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
                     ))}

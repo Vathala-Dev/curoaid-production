@@ -1977,8 +1977,8 @@ export default function CuroAidHero({
           position: absolute;
           inset: 0;
           width: 100%;
-          height: 100%;
-          object-fit: cover;
+          height: 120%;
+          object-fit: fill;
           object-position: center center;
           z-index: 0;
         }
