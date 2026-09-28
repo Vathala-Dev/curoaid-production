@@ -353,7 +353,10 @@ export default function Navbar() {
 
     return (
         <header
-            className="sticky top-0 z-50 w-full shadow-sm"
+            className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled
+                ? "bg-white shadow-md"
+                : "bg-transparent shadow-none"
+                }`}
 
         >
             <div className="relative mx-auto flex h-[72px] w-full max-w-[1400px] items-center justify-between px-4 sm:px-6 lg:px-12">
@@ -446,7 +449,7 @@ export default function Navbar() {
                     href="/contact"
                     className="hidden md:flex items-center justify-center  "
                 >
-                    <GradientButton label="Contact Us" />
+                    <GradientButton className="px-4 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm" label="Book Now" />
                 </Link>
 
                 {/* Mobile Menu Button */}
@@ -546,9 +549,9 @@ export default function Navbar() {
                             href="/contact"
                             role="menuitem"
                             onClick={closeMobileMenu}
-                            className="flex min-h-[44px] items-center text-[16px] font-medium leading-6 text-[#3f4847] transition-colors hover:text-[#4cc6f0] sm:text-[17px]"
-                        >
-                            <GradientButton label="Contact Us" />
+                            className="flex items-center text-[16px] font-medium leading-6 text-[#3f4847] transition-colors hover:text-[#4cc6f0] sm:text-[17px]"                        >
+                            <GradientButton className="px-4 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm"
+                                label="Book Now" />
                         </Link>
                     </div>
                 </div>
