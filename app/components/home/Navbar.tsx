@@ -315,7 +315,7 @@ const services = [
     { name: "Wound Care at Home", href: "/wound-care-at-home" },
     { name: "Blood Test at Home", href: "/blood-test-at-home" },
     { name: "NRI Elder Care", href: "/nri-elder-care" },
-    { name:"Veterinary Docto at Home", href: "veterinary-doctor-home-visit" },
+    { name:"Veterinary Doctor at Home", href: "veterinary-doctor-home-visit" },
     { name: "Medical Equipment Rental And Sale", href: "/medical-equipment-rental-sale" },
 
 ];
