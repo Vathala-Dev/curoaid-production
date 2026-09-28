@@ -305,17 +305,19 @@ import { useEffect, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import GradientButton from "../ui/GradientButton";
 
+
 const services = [
-    { name: "Home Doctor Services", href: "/doctor-at-home" },
-    { name: "Nursing Services", href: "/nursing-care" },
-    { name: "Wound Care Services", href: "/wound-care" },
-    { name: "Elder Care", href: "/elder-care" },
-    { name: "Veterinary Services", href: "/veterinary-doctor-home-visit" },
-    { name: "Physiotherapy", href: "/physiotherapy" },
-    { name: "Yoga", href: "/yoga-at-home" },
-    { name: "NRI Patient Care", href: "/nri-elder-care" },
-    { name: "Hospital Equipment", href: "/medical-equipment-rental" },
-    { name: "Renal Blood Test", href: "/blood-test-at-home" },
+    { name: "Doctor at Home", href: "/doctor-at-home" },
+    { name: "Home Nursing Services", href: "/home-nursing-services" },
+    { name: "Physiotherapy at Home", href: "/physiotherapy-at-home" },
+    { name: "Elder Care at Home", href: "/elder-care-at-home" },
+    { name: "Yoga at Home", href: "/yoga-at-home" },
+    { name: "Wound Care at Home", href: "/wound-care-at-home" },
+    { name: "Blood Test at Home", href: "/blood-test-at-home" },
+    { name: "NRI Elder Care", href: "/nri-elder-care" },
+
+    { name: "Medical Equipment Rental And Sale", href: "/medical-equipment-rental-sale" },
+
 ];
 
 export default function Navbar() {

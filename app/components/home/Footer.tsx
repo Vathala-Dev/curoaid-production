@@ -20,13 +20,17 @@ const quickLinks = [
 ];
 
 const services = [
-  { label: "Doctor at Home", href: "/doctor-visit-athome" },
-  { label: "Home Nursing Services", href: "/nursing" },
-  { label: "Physiotherapy at Home", href: "/physiotherapy" },
-  { label: "Elder Care at Home", href: "/elder-care" },
-  { label: "Yoga at Home", href: "/yoga" },
-  { label: "Wound Care at Home", href: "/wound-care" },
-  { label: "Blood Test at Home", href: "/renal-blood-test" },
+  { label: "Doctor at Home", href: "/doctor-at-home" },
+  { label: "Home Nursing Services", href: "/home-nursing-services" },
+  { label: "Physiotherapy at Home", href: "/physiotherapy-at-home" },
+  { label: "Elder Care at Home", href: "/elder-care-at-home" },
+  { label: "Yoga at Home", href: "/yoga-at-home" },
+  { label: "Wound Care at Home", href: "/wound-care-at-home" },
+  { label: "Blood Test at Home", href: "/blood-test-at-home" },
+  { label: "NRI Elder Care", href: "/nri-elder-care" },
+
+  { label: "Medical Equipment Rental And Sale", href: "/medical-equipment-rental-sale" },
+
 ];
 
 const contactDetails = [
