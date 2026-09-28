@@ -354,13 +354,7 @@ export default function Navbar() {
     };
 
     return (
-        <header
-            className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled
-                ? "bg-white shadow-md"
-                : "bg-transparent shadow-none"
-                }`}
-
-        >
+        <header className="relative z-50 w-full transition-all duration-300" >
             <div className="relative mx-auto flex h-[72px] w-full max-w-[1400px] items-center justify-between px-4 sm:px-6 lg:px-12">
                 {/* Logo + Brand */}
                 <Link
@@ -538,7 +532,7 @@ export default function Navbar() {
 
                         {/* About */}
                         <Link
-                            href="/about"
+                            href="/about-us"
                             role="menuitem"
                             onClick={closeMobileMenu}
                             className="flex min-h-[44px] items-center text-[16px] font-medium leading-6 text-[#3f4847] transition-colors hover:text-[#4cc6f0] sm:text-[17px]"
