@@ -179,7 +179,7 @@ export default function ServiceDesign({
                                 {data.hero.description}
                             </p>
 
-                           
+
                         </div>
                     </div>
                 </div>
@@ -293,15 +293,16 @@ export default function ServiceDesign({
                                             alt={item.imageAlt}
                                             width={500}
                                             height={300}
+                                            sizes="(max-width: 640px) 100vw, 33vw"
                                             className="
-                            h-[175px]
-                            w-full
-                            object-cover
-                            transition-transform
-                            duration-500
-                            group-hover:scale-105
-                            sm:h-[155px]
-                        "
+        h-auto
+        w-full
+        object-contain
+        transition-transform
+        duration-500
+        group-hover:scale-[1.02]
+      "
+                        
                                         />
                                     </div>
                                 </div>
