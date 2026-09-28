@@ -259,13 +259,24 @@ function ContactForm() {
     </div>
   );
 }
+const data = {
+  hero: {
+    badge: "Contact Us",
+    title: "Get in Touch With CuroAid",
+    description:
+      "Have questions about our services or need to schedule an appointment? Our team is here to help. Reach out to us and experience responsive, patient-focused support from the CuroAid healthcare team.",
+    image: "/assets/contact-banner.webp",
+    imageAlt:
+      "Contact CuroAid for trusted home healthcare services and patient support",
+  },
+};
 
 
 export default function Contact() {
   return (
     <main className="contact-page">
-      <Navbar/>
-      <section className="contact-hero">
+      <Navbar />
+      {/* <section className="contact-hero">
         <Image
           src="/assets/contact-banner.webp"
           alt="CuroAid healthcare support"
@@ -325,8 +336,80 @@ export default function Contact() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
+      <section className="px-2 sm:px-3 lg:px-5">
+        <div className="relative mx-auto w-full overflow-hidden rounded-xl sm:rounded-2xl">
+          {/* Hero Image */}
+          <Image
+            src={data.hero.image}
+            alt={data.hero.imageAlt}
+            width={1800}
+            height={650}
+            priority
+            className="h-[360px] w-full object-cover object-center sm:h-[400px] lg:h-[430px]"
+          />
 
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/10" />
+
+          {/* Hero content */}
+          <div className="absolute inset-0 flex items-center justify-center px-4 py-6 text-center sm:px-6">
+            <div className="w-full max-w-[760px] text-white">
+
+              {/* Badge */}
+              <span
+                className="
+                        mb-2 inline-flex
+                        rounded-full
+                        bg-[#55d7ef]/90
+                        px-3 py-1
+                        text-[9px] font-medium
+                        sm:mb-3 sm:px-4 sm:py-1.5 sm:text-xs
+                    "
+              >
+                {data.hero.badge}
+              </span>
+
+              {/* Title */}
+              <h1
+                className="
+                        mx-auto
+                        max-w-[340px]
+                        text-2xl
+                        font-extrabold
+                        leading-[1.15]
+                        sm:max-w-[600px]
+                        sm:text-4xl
+                        lg:max-w-[760px]
+                        lg:text-5xl
+                    "
+              >
+                {data.hero.title}
+              </h1>
+
+              {/* Description */}
+              <p
+                className="
+                        mx-auto
+                        mt-2
+                        max-w-[330px]
+                        text-[11px]
+                        leading-[1.5]
+                        text-white
+                        sm:mt-3
+                        sm:max-w-[600px]
+                        sm:text-sm
+                        sm:leading-6
+                    "
+              >
+                {data.hero.description}
+              </p>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="contact-main-section">
         <div className="contact-container contact-grid">
