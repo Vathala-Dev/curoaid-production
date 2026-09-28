@@ -19,8 +19,8 @@ export default function Home() {
   return (
     <div className="bg-white min-h-screen w-full">
 
-      <Navbar />
       <main>
+        <Navbar />
         <CuroAidHero />
         <WhoWeAreSection />
         <ServicesSection />
@@ -30,8 +30,8 @@ export default function Home() {
         <BlogsSection />
         <CTABannerSection {...homeCTA} />
         <FAQSection {...homeFAQ} />
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 }

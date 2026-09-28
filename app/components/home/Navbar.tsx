@@ -434,10 +434,10 @@ export default function Navbar() {
                     </Link>
 
                     <Link
-                        href="/about"
+                        href="/contact"
                         className="text-[15px] font-medium text-white transition-colors hover:text-white/80"
                     >
-                        About Us
+                        Contact Us
                     </Link>
                 </nav>
 
