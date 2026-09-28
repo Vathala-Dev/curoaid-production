@@ -1678,7 +1678,7 @@ function ServiceCard({ service, onSelect }) {
 }
 
 export default function CuroAidHero({
-  videoSrcMp4 = '/videos/curoaid-hero.mp4',
+  videoSrcMp4 = '/videos/CuroAid_hero_white_fade.webm',
   videoSrcWebm = '',
   posterSrc = '/images/hero-poster.jpg',
 }) {
@@ -1977,7 +1977,7 @@ export default function CuroAidHero({
           position: absolute;
           inset: 0;
           width: 100%;
-          height: 120%;
+          height: 130%;
           object-fit: fill;
           object-position: center center;
           z-index: 0;
