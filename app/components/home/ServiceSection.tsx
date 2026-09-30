@@ -1,11 +1,20 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import SectionBadge from "../ui/SectionBadge";
-import { imgDoctorAtHome, imgDoctorIcon, imgHomeNursing, imgGroup38, imgPhysiotherapy, imgPhysioIcon, woundCareImage, bloodTestImage, nriElderCareImage, elderCareImage, veterinaryImage, yogaImage, medicalEquipmentImage } from "@/lib/assets";
-
-
-
-
+import {
+    imgDoctorAtHome,
+    imgHomeNursing,
+    imgPhysiotherapy,
+    imgPhysioIcon,
+    woundCareImage,
+    bloodTestImage,
+    nriElderCareImage,
+    elderCareImage,
+    veterinaryImage,
+    yogaImage,
+    medicalEquipmentImage,
+} from "@/lib/assets";
 
 const services = [
     {
@@ -14,6 +23,7 @@ const services = [
             "Professional medical consultation and care at your doorstep.",
         image: imgDoctorAtHome,
         icon: imgPhysioIcon,
+        link: "/doctor-at-home",
     },
     {
         title: "Home Nursing Services",
@@ -21,6 +31,7 @@ const services = [
             "Professional nursing care and medical support delivered conveniently at your doorstep.",
         image: imgHomeNursing,
         icon: imgPhysioIcon,
+        link: "/home-nursing-services",
     },
     {
         title: "Physiotherapy at Home",
@@ -28,6 +39,7 @@ const services = [
             "Professional rehabilitation and physiotherapy services at home.",
         image: imgPhysiotherapy,
         icon: imgPhysioIcon,
+        link: "/physiotherapy",
     },
     {
         title: "Wound Care Services",
@@ -35,6 +47,7 @@ const services = [
             "Expert wound care and dressing services to support safe and effective healing at home.",
         image: woundCareImage,
         icon: imgPhysioIcon,
+        link: "/wound-care-services",
     },
     {
         title: "Elder Care",
@@ -42,6 +55,7 @@ const services = [
             "Compassionate and personalized care services to support the comfort and well-being of seniors at home.",
         image: elderCareImage,
         icon: imgPhysioIcon,
+        link: "/elder-care",
     },
     {
         title: "Veterinary Services",
@@ -49,6 +63,7 @@ const services = [
             "Convenient veterinary consultation and healthcare services for your pets at home.",
         image: veterinaryImage,
         icon: imgPhysioIcon,
+        link: "/veterinary-services",
     },
     {
         title: "Yoga at Home",
@@ -56,6 +71,7 @@ const services = [
             "Personalized yoga sessions at home to support flexibility, relaxation, fitness, and overall well-being.",
         image: yogaImage,
         icon: imgPhysioIcon,
+        link: "/yoga-at-home",
     },
     {
         title: "NRI Patient Care",
@@ -63,6 +79,7 @@ const services = [
             "Reliable healthcare support for your loved ones in India, with personalized assistance and regular care.",
         image: nriElderCareImage,
         icon: imgPhysioIcon,
+        link: "/nri-patient-care",
     },
     {
         title: "Hospital Equipment",
@@ -70,6 +87,7 @@ const services = [
             "Quality medical equipment available for rental or purchase to support comfortable care at home.",
         image: medicalEquipmentImage,
         icon: imgPhysioIcon,
+        link: "/hospital-equipment",
     },
     {
         title: "Blood Test at Home",
@@ -77,22 +95,22 @@ const services = [
             "Convenient blood sample collection at home for renal health monitoring and diagnostic testing.",
         image: bloodTestImage,
         icon: imgPhysioIcon,
+        link: "/blood-test-at-home",
     },
 ];
 
-
 export default function ServicesSection() {
     return (
-        <section className="py-20 bg-gray-50">
-            <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <section className="bg-gray-50 py-20">
+            <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
 
                 {/* Section Header */}
-                <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-12">
+                <div className="mb-12 flex flex-col items-start justify-between gap-8 lg:flex-row">
 
                     <div>
                         <SectionBadge label="Services" />
 
-                        <h2 className="text-3xl lg:text-[40px] leading-tight font-bold text-black mt-4">
+                        <h2 className="mt-4 text-3xl font-bold leading-tight text-black lg:text-[40px]">
                             Our Home Healthcare
                             <br />
                             Services
@@ -100,11 +118,11 @@ export default function ServicesSection() {
                     </div>
 
                     <div className="lg:max-w-sm lg:pt-4 lg:text-right">
-                        <p className="text-black text-[18px] leading-relaxed mb-2 font-semibold">
+                        <p className="mb-2 text-[18px] font-semibold leading-relaxed text-black">
                             Complete Care, Designed Around Your Needs
                         </p>
 
-                        <p className="text-[#454646] text-sm leading-relaxed">
+                        <p className="text-sm leading-relaxed text-[#454646]">
                             Explore CuroAid&apos;s comprehensive range of home healthcare
                             services designed to meet different patient and family needs
                         </p>
@@ -112,19 +130,26 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Services */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
                     {services.map((service) => (
-                        <div
+                        <Link
                             key={service.title}
+                            href={service.link}
+                            aria-label={`Learn more about ${service.title}`}
                             className="
-                        relative
-                        h-[380px]
-                        rounded-2xl
-                        overflow-hidden
-                        shadow-md
-                        group
-                        cursor-pointer
-                    "
+                                relative
+                                block
+                                h-[380px]
+                                cursor-pointer
+                                overflow-hidden
+                                rounded-2xl
+                                shadow-md
+                                group
+                                focus:outline-none
+                                focus-visible:ring-2
+                                focus-visible:ring-[#4cc6f0]
+                                focus-visible:ring-offset-2
+                            "
                         >
                             {/* Image */}
                             <Image
@@ -132,125 +157,110 @@ export default function ServicesSection() {
                                 alt={service.title}
                                 fill
                                 sizes="
-                            (max-width: 768px) 100vw,
-                            (max-width: 1024px) 50vw,
-                            33vw
-                        "
+                                    (max-width: 768px) 100vw,
+                                    (max-width: 1024px) 50vw,
+                                    33vw
+                                "
                                 className="
-                            object-cover
-                            transition-transform
-                            duration-700
-                            ease-out
-                            group-hover:scale-105
-                        "
+                                    object-cover
+                                    transition-transform
+                                    duration-700
+                                    ease-out
+                                    group-hover:scale-105
+                                "
                             />
 
                             {/* Hover Content */}
                             <div
                                 className="
-                            absolute
-                            left-4
-                            right-4
-                            bottom-4
-
-                            h-[68px]
-                            group-hover:h-[150px]
-
-                            rounded-2xl
-                            overflow-hidden
-
-                            bg-black/55
-                            backdrop-blur-sm
-
-                            border
-                            border-white/20
-
-                            transition-all
-                            duration-500
-                            ease-out
-                        "
+                                    absolute
+                                    bottom-4
+                                    left-4
+                                    right-4
+                                    h-[68px]
+                                    overflow-hidden
+                                    rounded-2xl
+                                    border
+                                    border-white/20
+                                    bg-black/55
+                                    backdrop-blur-sm
+                                    transition-all
+                                    duration-500
+                                    ease-out
+                                    group-hover:h-[150px]
+                                "
                             >
-
                                 {/* Title */}
-                                <div className="h-[68px] flex items-center gap-3 px-4">
+                                <div className="flex h-[68px] items-center gap-3 px-4">
 
                                     <div
                                         className="
-                                    w-10
-                                    h-10
-                                    flex-shrink-0
-                                    flex
-                                    items-center
-                                    justify-center
-                                    rounded-full
-                                    bg-white/10
-
-                                    transition-all
-                                    duration-500
-
-                                    group-hover:bg-white/20
-                                    group-hover:scale-105
-                                "
+                                            flex
+                                            h-10
+                                            w-10
+                                            shrink-0
+                                            items-center
+                                            justify-center
+                                            rounded-full
+                                            bg-white/10
+                                            transition-all
+                                            duration-500
+                                            group-hover:scale-105
+                                            group-hover:bg-white/20
+                                        "
                                     >
                                         <Image
                                             src={service.icon}
                                             alt=""
                                             width={40}
                                             height={40}
-                                            className="w-10 h-10 object-contain"
+                                            className="h-10 w-10 object-contain"
                                             aria-hidden="true"
                                         />
                                     </div>
 
                                     <span
                                         className="
-                                    text-white
-                                    text-base
-                                    font-bold
-
-                                    transition-transform
-                                    duration-500
-
-                                    group-hover:translate-x-1
-                                "
+                                            text-base
+                                            font-bold
+                                            text-white
+                                            transition-transform
+                                            duration-500
+                                            group-hover:translate-x-1
+                                        "
                                     >
                                         {service.title}
                                     </span>
-
                                 </div>
 
                                 {/* Description */}
                                 <div
                                     className="
-                                px-4
-                                opacity-0
-                                translate-y-3
-
-                                transition-all
-                                duration-500
-                                ease-out
-
-                                group-hover:opacity-100
-                                group-hover:translate-y-0
-                            "
+                                        translate-y-3
+                                        px-4
+                                        opacity-0
+                                        transition-all
+                                        duration-500
+                                        ease-out
+                                        group-hover:translate-y-0
+                                        group-hover:opacity-100
+                                    "
                                 >
                                     <p
                                         className="
-                                    text-white/90
-                                    text-sm
-                                    leading-relaxed
-                                    line-clamp-3
-                                "
+                                            line-clamp-3
+                                            text-sm
+                                            leading-relaxed
+                                            text-white/90
+                                        "
                                     >
                                         {service.subtitle}
                                     </p>
                                 </div>
-
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
-
             </div>
         </section>
     );
