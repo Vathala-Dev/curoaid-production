@@ -39,7 +39,7 @@ const services = [
             "Professional rehabilitation and physiotherapy services at home.",
         image: imgPhysiotherapy,
         icon: imgPhysioIcon,
-        link: "/physiotherapy",
+        link: "/physiotherapy-at-home",
     },
     {
         title: "Wound Care Services",
@@ -47,7 +47,7 @@ const services = [
             "Expert wound care and dressing services to support safe and effective healing at home.",
         image: woundCareImage,
         icon: imgPhysioIcon,
-        link: "/wound-care-services",
+        link: "/wound-care--at-home",
     },
     {
         title: "Elder Care",
@@ -55,7 +55,7 @@ const services = [
             "Compassionate and personalized care services to support the comfort and well-being of seniors at home.",
         image: elderCareImage,
         icon: imgPhysioIcon,
-        link: "/elder-care",
+        link: "/elder-care-at-home",
     },
     {
         title: "Veterinary Services",
@@ -63,7 +63,7 @@ const services = [
             "Convenient veterinary consultation and healthcare services for your pets at home.",
         image: veterinaryImage,
         icon: imgPhysioIcon,
-        link: "/veterinary-services",
+        link: "/veterinary-doctor-at-home",
     },
     {
         title: "Yoga at Home",
@@ -79,7 +79,7 @@ const services = [
             "Reliable healthcare support for your loved ones in India, with personalized assistance and regular care.",
         image: nriElderCareImage,
         icon: imgPhysioIcon,
-        link: "/nri-patient-care",
+        link: "/nri-elder-care",
     },
     {
         title: "Hospital Equipment",
@@ -87,7 +87,7 @@ const services = [
             "Quality medical equipment available for rental or purchase to support comfortable care at home.",
         image: medicalEquipmentImage,
         icon: imgPhysioIcon,
-        link: "/hospital-equipment",
+        link: "/medical-equipment-rental-sale",
     },
     {
         title: "Blood Test at Home",
