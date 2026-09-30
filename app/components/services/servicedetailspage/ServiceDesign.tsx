@@ -91,7 +91,7 @@ export type ServiceData = {
     };
 };
 
-type ServiceDesignProps = {
+export type ServiceDesignProps = {
     data: ServiceData;
 };
 
@@ -99,8 +99,7 @@ export default function ServiceDesign({
     data,
 }: ServiceDesignProps) {
     const [openFaq, setOpenFaq] = useState<number | null>(0);
-    console.log("ddddd", data.booking)
-    console.log("ddddd", data.whyChoose)
+
 
     return (
         <main className="w-full overflow-hidden bg-white">
@@ -373,14 +372,11 @@ export default function ServiceDesign({
                                 ))}
                         </div>
 
-                        {/* <button
-                            type="button"
-                            className="mt-5 rounded-lg bg-[#65c85c] px-6 py-3 text-xs font-bold text-white shadow-sm transition hover:bg-[#55b94d]"
-                        >
-                            {data.introduction.button}
-                            <span className="ml-1">→</span>
-                        </button> */}
-                        <GradientButton label="Book Now" />
+                        <GradientButton
+                            label="Book Now →"
+                            className="mt-15 rounded-lg px-4 py-3 text-xs font-bold"
+                        />
+
 
                     </div>
                 </div>

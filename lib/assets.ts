@@ -219,6 +219,22 @@ export const blogCTA = `${assetPathPrefix}/blogCTA.webp`;
 
 
 
+export const aboutbanner = `${assetPathPrefix}/aboutbanner.webp`;
+
+export const aboutusImage = `${assetPathPrefix}/aboutusImage.webp`;
+export const Hema = `${assetPathPrefix}/Hema.webp`;
+
+export const Taj = `${assetPathPrefix}/Taj.webp`;
+export const Siraj = `${assetPathPrefix}/Siraj.webp`;
+export const Naveed = `${assetPathPrefix}/Naveed.webp`;
+
+export const mission = `${assetPathPrefix}/mission.webp`;
+export const vision = `${assetPathPrefix}/vision.webp`;
+
+export const logo =`${assetPathPrefix}/logo.webp`;
+
+
+
 
 
 

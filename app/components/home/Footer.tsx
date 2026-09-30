@@ -9,27 +9,17 @@ import {
   imgFacebook,
   imgInstagram,
   imgLinkedin,
+  logo,
 } from "@/lib/assets";
 
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "Blogs", href: "/blogs" },
-  // { label: "About Us", href: "/about-us" },
+  { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "/contact" },
-];
+  { label: "Team", href: "/our-team" },
 
-const services = [
-  { label: "Doctor at Home", href: "/doctor-at-home" },
-  { label: "Home Nursing Services", href: "/home-nursing-services" },
-  { label: "Physiotherapy at Home", href: "/physiotherapy-at-home" },
-  { label: "Elder Care at Home", href: "/elder-care-at-home" },
-  { label: "Yoga at Home", href: "/yoga-at-home" },
-  { label: "Wound Care at Home", href: "/wound-care-at-home" },
-  { label: "Blood Test at Home", href: "/blood-test-at-home" },
-  { label: "NRI Elder Care", href: "/nri-elder-care" },
-
-  { label: "Medical Equipment Rental And Sale", href: "/medical-equipment-rental-sale" },
 
 ];
 
@@ -68,6 +58,20 @@ const socialLinks = [
     href: "#",
   },
 ];
+const services = [
+  { name: "Doctor at Home", href: "/doctor-at-home" },
+  { name: "Home Nursing Services", href: "/home-nursing-services" },
+  { name: "Physiotherapy at Home", href: "/physiotherapy-at-home" },
+  { name: "Elder Care at Home", href: "/elder-care-at-home" },
+  { name: "Yoga at Home", href: "/yoga-at-home" },
+  { name: "Wound Care at Home", href: "/wound-care-at-home" },
+  { name: "Blood Test at Home", href: "/blood-test-at-home" },
+  { name: "NRI Elder Care", href: "/nri-elder-care" },
+  { name: "Veterinary Doctor at Home", href: "veterinary-doctor-home-visit" },
+  { name: "Medical Equipment Rental And Sale", href: "/medical-equipment-rental-sale" },
+
+];
+
 
 export default function Footer() {
   return (
@@ -79,11 +83,11 @@ export default function Footer() {
           <div>
             <Link href="/" aria-label="CuroAid Home">
               <Image
-                src={imgFinalisedLogo1}
+                src={logo}
                 alt="CuroAid"
-                width={160}
-                height={56}
-                className="mb-4 h-14 w-auto object-contain"
+                width={500}
+                height={200}
+                className="mb-4 h-32 w-auto object-contain object-left"
               />
             </Link>
 
@@ -132,12 +136,12 @@ export default function Footer() {
             <nav aria-label="Healthcare services">
               <ul className="space-y-2">
                 {services.map((service) => (
-                  <li key={service.label}>
+                  <li key={service.name}>
                     <Link
                       href={service.href}
                       className="text-sm text-[#454646] transition-colors hover:text-[#4cc6f0]"
                     >
-                      {service.label}
+                      {service.name}
                     </Link>
                   </li>
                 ))}

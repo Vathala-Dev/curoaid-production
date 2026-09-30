@@ -298,7 +298,7 @@
 
 "use client";
 
-import { imgFinalisedLogo1 } from "@/lib/assets";
+import { imgFinalisedLogo1, logo } from "@/lib/assets";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -306,7 +306,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import GradientButton from "../ui/GradientButton";
 
 
-const services = [
+export const services = [
     { name: "Doctor at Home", href: "/doctor-at-home" },
     { name: "Home Nursing Services", href: "/home-nursing-services" },
     { name: "Physiotherapy at Home", href: "/physiotherapy-at-home" },
@@ -315,7 +315,7 @@ const services = [
     { name: "Wound Care at Home", href: "/wound-care-at-home" },
     { name: "Blood Test at Home", href: "/blood-test-at-home" },
     { name: "NRI Elder Care", href: "/nri-elder-care" },
-    { name:"Veterinary Doctor at Home", href: "veterinary-doctor-home-visit" },
+    { name: "Veterinary Doctor at Home", href: "veterinary-doctor-home-visit" },
     { name: "Medical Equipment Rental And Sale", href: "/medical-equipment-rental-sale" },
 
 ];
@@ -360,32 +360,21 @@ export default function Navbar() {
                 <Link
                     href="/"
                     onClick={closeMobileMenu}
-                    className={`flex min-w-0 items-center gap-2 transition-all duration-300 ease-in-out sm:gap-3 lg:gap-4 
+                    className={`flex min-w-0 items-center transition-all duration-300 ease-in-out
                         ${scrolled
                             ? "max-md:pointer-events-none max-md:-translate-x-8 max-md:opacity-0"
                             : ""
-                        }`
-                    }
+                        }`}
                 >
-                    <div className="relative h-[52px] w-[52px] shrink-0 overflow-hidden rounded-[10px] sm:h-[60px] sm:w-[60px] lg:h-[72px] lg:w-[72px]">
-                        <Image
-                            src={imgFinalisedLogo1}
-                            alt="CuroAid Healthcare at Home"
-                            fill
-                            priority
-                            sizes="(max-width: 640px) 52px, (max-width: 1024px) 60px, 72px"
-                            className="object-cover"
-                        />
-                    </div>
-
-                    <div className="flex min-w-0 flex-col justify-center">
-                        <span className="text-[24px] font-bold leading-[28px]  sm:text-[27px] sm:leading-[30px] lg:text-[30px] lg:leading-[32px]">
-                            CuroAid
-                        </span>
-                        <span className="whitespace-nowrap text-[10px] font-semibold leading-[14px]  sm:text-[12px] sm:leading-[16px] lg:text-[14px] lg:leading-[18px]">
-                            Healthcare at Home
-                        </span>
-                    </div>
+                    <Image
+                        src={logo}
+                        alt="CuroAid Healthcare at Home"
+                        width={273}
+                        height={68}
+                        priority
+                        sizes="(max-width: 640px) 190px, (max-width: 1024px) 225px, 273px"
+                        className="h-auto w-[180px] sm:w-[210px] lg:w-[248px] object-contain"
+                    />
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -433,10 +422,16 @@ export default function Navbar() {
                     </Link>
 
                     <Link
-                        href="/contact"
+                        href="/about-us"
                         className="text-[15px] font-medium text-white transition-colors hover:text-white/80"
                     >
-                        Contact Us
+                        About Us
+                    </Link>
+                    <Link
+                        href="/our-team"
+                        className="text-[15px] font-medium text-white transition-colors hover:text-white/80"
+                    >
+                        Team
                     </Link>
                 </nav>
 
