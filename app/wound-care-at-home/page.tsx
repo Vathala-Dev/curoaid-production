@@ -1,4 +1,5 @@
 import WoundCareContent from "@/app/components/services/WoundCareContent";
+import { woundCareImage } from "@/lib/assets";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 
         images: [
             {
-                url: "/images/services/wound-care/og-image.jpg",
+                url: woundCareImage,
                 width: 1200,
                 height: 630,
                 alt: "CuroAid Wound Care Services at Home",

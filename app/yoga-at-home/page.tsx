@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import YogaAtHomeContent from "@/app/components/services/YogaAtHomeContent";
+import { yogaImage } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "Yoga Classes at Home | CuroAid",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/images/services/yoga-at-home/og-image.jpg",
+        url: yogaImage,
         width: 1200,
         height: 630,
         alt: "CuroAid Yoga Classes at Home",

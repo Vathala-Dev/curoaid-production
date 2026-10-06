@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import VeterinaryCareContent from "@/app/components/services/VeterinaryCareContent";
+import { veterinaryImage } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "Veterinary Care at Home | CuroAid",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/images/services/veterinary-care/og-image.jpg",
+        url: veterinaryImage,
         width: 1200,
         height: 630,
         alt: "CuroAid Veterinary Care at Home",

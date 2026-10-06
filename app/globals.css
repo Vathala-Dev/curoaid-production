@@ -1103,8 +1103,14 @@ a {
 
   padding-top: 14px;
   margin-top: auto;
+}
+.metrics-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
 
-  border-top: 1px solid rgba(226, 232, 240, 0.7);
+  padding: 10px 16px;
+  margin-top: auto;
 }
 
 .metric-item {
@@ -1112,6 +1118,9 @@ a {
   align-items: center;
 
   gap: 10px;
+  background: #f3f4f6;
+  border-radius: 50px;
+  padding: 10px 16px;
 }
 
 .metric-icon {
@@ -1140,7 +1149,7 @@ a {
 }
 
 .metric-value {
-  font-size: 13.5px;
+  font-size: 14.5px;
   font-weight: 700;
 
   line-height: 1.1;
@@ -1149,7 +1158,7 @@ a {
 }
 
 .metric-label {
-  font-size: 10.5px;
+  font-size: 11.5px;
   font-weight: 500;
 
   color: var(--hero-slate);

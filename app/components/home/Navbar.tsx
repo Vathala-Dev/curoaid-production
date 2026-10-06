@@ -354,14 +354,15 @@ export default function Navbar() {
     };
 
     return (
-        <header className="relative z-50 w-full transition-all duration-300" >
+        <header className="relative z-50 w-full transition-all duration-300">
             <div className="relative mx-auto flex h-[72px] w-full max-w-[1400px] items-center justify-between px-4 sm:px-6 lg:px-12">
+
                 {/* Logo + Brand */}
                 <Link
                     href="/"
                     onClick={closeMobileMenu}
                     className={`flex min-w-0 items-center transition-all duration-300 ease-in-out
-                        ${scrolled
+                    ${scrolled
                             ? "max-md:pointer-events-none max-md:-translate-x-8 max-md:opacity-0"
                             : ""
                         }`}
@@ -373,12 +374,14 @@ export default function Navbar() {
                         height={68}
                         priority
                         sizes="(max-width: 640px) 190px, (max-width: 1024px) 225px, 273px"
-                        className="h-auto w-[180px] sm:w-[210px] lg:w-[248px] object-contain"
+                        className="h-auto w-[180px] object-contain sm:w-[210px] lg:w-[248px]"
                     />
                 </Link>
 
                 {/* Desktop Navigation */}
                 <nav className="hidden items-center gap-7 md:flex lg:gap-10">
+
+                    {/* Services */}
                     <div
                         className="relative"
                         onMouseEnter={() => setDesktopServicesOpen(true)}
@@ -386,9 +389,10 @@ export default function Navbar() {
                     >
                         <button
                             type="button"
-                            className="flex items-center gap-2 text-[15px] font-medium transition-colors hover:text-white/80"
+                            className="flex items-center gap-2 text-[16px] font-medium transition-colors hover:text-white/80"
                         >
                             Services
+
                             <ChevronDown
                                 size={15}
                                 strokeWidth={2}
@@ -397,6 +401,7 @@ export default function Navbar() {
                             />
                         </button>
 
+                        {/* Services Dropdown */}
                         {desktopServicesOpen && (
                             <div className="absolute left-1/2 top-full -translate-x-1/2 pt-4">
                                 <div className="w-[260px] overflow-hidden rounded-xl border border-gray-100 bg-white py-2 shadow-xl">
@@ -414,22 +419,26 @@ export default function Navbar() {
                         )}
                     </div>
 
+                    {/* Blogs */}
                     <Link
                         href="/blogs"
-                        className="text-[15px] font-medium text-white transition-colors hover:text-white/80"
+                        className="text-[16px] font-medium text-white transition-colors hover:text-white/80"
                     >
                         Blogs
                     </Link>
 
+                    {/* About Us */}
                     <Link
                         href="/about-us"
-                        className="text-[15px] font-medium text-white transition-colors hover:text-white/80"
+                        className="text-[16px] font-medium text-white transition-colors hover:text-white/80"
                     >
                         About Us
                     </Link>
+
+                    {/* Team */}
                     <Link
                         href="/our-team"
-                        className="text-[15px] font-medium text-white transition-colors hover:text-white/80"
+                        className="text-[16px] font-medium text-white transition-colors hover:text-white/80"
                     >
                         Team
                     </Link>
@@ -438,9 +447,12 @@ export default function Navbar() {
                 {/* Desktop Contact */}
                 <Link
                     href="/contact"
-                    className="hidden md:flex items-center justify-center  "
+                    className="hidden items-center justify-center md:flex"
                 >
-                    <GradientButton className="px-4 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm" label="Book Now" />
+                    <GradientButton
+                        className="px-4 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm"
+                        label="Book Now"
+                    />
                 </Link>
 
                 {/* Mobile Menu Button */}
@@ -455,9 +467,15 @@ export default function Navbar() {
                         aria-label={menuOpen ? "Close menu" : "Open menu"}
                     >
                         {menuOpen ? (
-                            <X className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2.25} />
+                            <X
+                                className="h-5 w-5 sm:h-6 sm:w-6"
+                                strokeWidth={2.25}
+                            />
                         ) : (
-                            <Menu className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2.25} />
+                            <Menu
+                                className="h-5 w-5 sm:h-6 sm:w-6"
+                                strokeWidth={2.25}
+                            />
                         )}
                     </button>
                 </div>
@@ -482,10 +500,13 @@ export default function Navbar() {
                     onClick={(event) => event.stopPropagation()}
                 >
                     <div className="px-5 py-5 sm:px-6 sm:py-6">
+
                         {/* Services */}
                         <button
                             type="button"
-                            onClick={() => setMobileServicesOpen((open) => !open)}
+                            onClick={() =>
+                                setMobileServicesOpen((open) => !open)
+                            }
                             className="flex min-h-[44px] w-full items-center justify-between text-left text-[16px] font-medium leading-6 text-[#1b355a] sm:text-[17px]"
                             aria-expanded={mobileServicesOpen}
                         >
@@ -540,9 +561,12 @@ export default function Navbar() {
                             href="/contact"
                             role="menuitem"
                             onClick={closeMobileMenu}
-                            className="flex items-center text-[16px] font-medium leading-6 text-[#3f4847] transition-colors hover:text-[#4cc6f0] sm:text-[17px]"                        >
-                            <GradientButton className="px-4 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm"
-                                label="Book Now" />
+                            className="flex items-center text-[16px] font-medium leading-6 text-[#3f4847] transition-colors hover:text-[#4cc6f0]"
+                        >
+                            <GradientButton
+                                className="px-4 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm"
+                                label="Book Now"
+                            />
                         </Link>
                     </div>
                 </div>

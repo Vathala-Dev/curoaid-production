@@ -32,13 +32,15 @@ export const imgStars = `${assetPathPrefix}/1bb85.png`;
 export const imgVector = `${assetPathPrefix}/3f08b.svg`;
 export const imgVectorWhite = `${assetPathPrefix}/a6d98.svg`;
 
-export const imgEmail = `${assetPathPrefix}/eebec.png`;
-export const imgLocation = `${assetPathPrefix}/428a4.png`;
-export const imgPhoneContact = `${assetPathPrefix}/ad58e.png`;
+export const imgLocation = `${assetPathPrefix}/eebec.png`;
+export const imgContact = `${assetPathPrefix}/428a4.png`;
+export const imgInstagram = `${assetPathPrefix}/ad58e.png`;
+export const imgPhoneContact = `${assetPathPrefix}/ad58ee.png`;
 
-export const imgFacebook = `${assetPathPrefix}/e136c.png`;
-export const imgInstagram = `${assetPathPrefix}/fdfb4.png`;
-export const imgLinkedin = `${assetPathPrefix}/f108b.png`;
+
+export const imgX = `${assetPathPrefix}/e136c.png`;
+export const imgLinkedin = `${assetPathPrefix}/fdfb4.png`;
+export const imgFacebook = `${assetPathPrefix}/face.png`;
 
 export const imgFAQArrow = `${assetPathPrefix}/49fe1.png`;
 
@@ -231,9 +233,10 @@ export const Naveed = `${assetPathPrefix}/Naveed.webp`;
 export const mission = `${assetPathPrefix}/mission.webp`;
 export const vision = `${assetPathPrefix}/vision.webp`;
 
-export const logo =`${assetPathPrefix}/logo.webp`;
+export const logo = `${assetPathPrefix}/logo11.webp`;
+export const imgEmail = `${assetPathPrefix}/Email.png`;
 
-
+export const imgyoutube = `${assetPathPrefix}/youtube.png`;
 
 
 

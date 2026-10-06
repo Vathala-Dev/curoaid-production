@@ -242,8 +242,8 @@ export default function ServiceDesign({
                                     {/* Google Play Icon */}
                                     <div className="flex shrink-0 items-center justify-center">
                                         <svg
-                                            width="18"
-                                            height="18"
+                                            width="10"
+                                            height="10"
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             className="sm:h-5 sm:w-5"
@@ -273,7 +273,7 @@ export default function ServiceDesign({
                                             GET IT ON
                                         </span>
 
-                                        <span className="mt-[3px] truncate text-[10px] font-semibold text-black sm:text-[11px]">
+                                        <span className="mt-[3px] whitespace-nowrap text-[9px] font-semibold text-black pr-3">
                                             Google Play
                                         </span>
                                     </div>

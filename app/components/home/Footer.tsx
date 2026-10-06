@@ -4,12 +4,14 @@ import Link from "next/link";
 import {
   imgFinalisedLogo1,
   imgPhoneContact,
-  imgEmail,
   imgLocation,
   imgFacebook,
   imgInstagram,
   imgLinkedin,
   logo,
+  imgContact,
+  imgEmail,
+  imgyoutube
 } from "@/lib/assets";
 
 const quickLinks = [
@@ -25,14 +27,14 @@ const quickLinks = [
 
 const contactDetails = [
   {
-    icon: imgPhoneContact,
+    icon:imgContact ,
     label: "+91 9150064364",
     href: "tel:+919150064364",
   },
   {
     icon: imgEmail,
-    label: "support@vathala.com",
-    href: "mailto:support@vathala.com",
+    label: "support@curoaid.com",
+    href: "mailto:support@curoaid.com",
   },
   {
     icon: imgLocation,
@@ -45,17 +47,23 @@ const socialLinks = [
   {
     icon: imgFacebook,
     label: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/people/VaThala/61554658859007/",
   },
   {
     icon: imgInstagram,
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/vathalaapp/",
+
   },
   {
     icon: imgLinkedin,
     label: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/company/vathala/",
+  },
+  {
+    icon: imgyoutube,
+    label: "You Tube",
+    href: "https://www.youtube.com/@Curoaid",
   },
 ];
 const services = [
@@ -83,7 +91,7 @@ export default function Footer() {
           <div>
             <Link href="/" aria-label="CuroAid Home">
               <Image
-                src={logo}
+                src={imgFinalisedLogo1}
                 alt="CuroAid"
                 width={500}
                 height={200}
