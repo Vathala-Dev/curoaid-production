@@ -18,7 +18,7 @@ import {
 
 const services = [
     {
-        title: "Doctor at Home",
+        title: "DOCTOR AT HOME",
         subtitle:
             "Professional medical consultation and care at your doorstep.",
         image: imgDoctorAtHome,
@@ -26,7 +26,7 @@ const services = [
         link: "/doctor-at-home",
     },
     {
-        title: "Home Nursing Services",
+        title: "HOME NURSING SERVICES",
         subtitle:
             "Professional nursing care and medical support delivered conveniently at your doorstep.",
         image: imgHomeNursing,
@@ -34,7 +34,7 @@ const services = [
         link: "/home-nursing-services",
     },
     {
-        title: "Physiotherapy at Home",
+        title: "PHYSIOTHERAPY AT HOME",
         subtitle:
             "Professional rehabilitation and physiotherapy services at home.",
         image: imgPhysiotherapy,
@@ -42,7 +42,7 @@ const services = [
         link: "/physiotherapy-at-home",
     },
     {
-        title: "Wound Care Services",
+        title: "WOUND CARE SERVICES",
         subtitle:
             "Expert wound care and dressing services to support safe and effective healing at home.",
         image: woundCareImage,
@@ -50,7 +50,7 @@ const services = [
         link: "/wound-care--at-home",
     },
     {
-        title: "Elder Care",
+        title: "ELDER CARE",
         subtitle:
             "Compassionate and personalized care services to support the comfort and well-being of seniors at home.",
         image: elderCareImage,
@@ -58,7 +58,7 @@ const services = [
         link: "/elder-care-at-home",
     },
     {
-        title: "Veterinary Services",
+        title: "VETERINARY SERVICES",
         subtitle:
             "Convenient veterinary consultation and healthcare services for your pets at home.",
         image: veterinaryImage,
@@ -66,7 +66,7 @@ const services = [
         link: "/veterinary-doctor-at-home",
     },
     {
-        title: "Yoga at Home",
+        title: "YOGA AT HOME",
         subtitle:
             "Personalized yoga sessions at home to support flexibility, relaxation, fitness, and overall well-being.",
         image: yogaImage,
@@ -74,7 +74,7 @@ const services = [
         link: "/yoga-at-home",
     },
     {
-        title: "NRI Patient Care",
+        title: "NRI PATIENT CARE",
         subtitle:
             "Reliable healthcare support for your loved ones in India, with personalized assistance and regular care.",
         image: nriElderCareImage,
@@ -82,7 +82,7 @@ const services = [
         link: "/nri-elder-care",
     },
     {
-        title: "Hospital Equipment",
+        title: "HOSPITAL EQUIPMENT",
         subtitle:
             "Quality medical equipment available for rental or purchase to support comfortable care at home.",
         image: medicalEquipmentImage,
@@ -90,7 +90,7 @@ const services = [
         link: "/medical-equipment-rental-sale",
     },
     {
-        title: "Blood Test at Home",
+        title: "BLOOD TEST AT HOME",
         subtitle:
             "Convenient blood sample collection at home for renal health monitoring and diagnostic testing.",
         image: bloodTestImage,
@@ -111,9 +111,7 @@ export default function ServicesSection() {
                         <SectionBadge label="Services" />
 
                         <h2 className="mt-4 text-3xl font-bold leading-tight text-black lg:text-[40px]">
-                            Our Home Healthcare
-                            <br />
-                            Services
+                            Our Services
                         </h2>
                     </div>
 

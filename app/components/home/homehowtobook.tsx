@@ -65,7 +65,7 @@ import {
 } from "@/lib/assets";
 
 export const homeWhyChoose = {
-    badge: "Why Choose",
+    badge: "Why Curoaid?",
 
     title: "Why Choose Curoaid?",
 
