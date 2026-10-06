@@ -298,7 +298,7 @@
 
 "use client";
 
-import { imgFinalisedLogo1, logo } from "@/lib/assets";
+import { imgFinalisedLogo1, imglogo, logo } from "@/lib/assets";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -368,7 +368,7 @@ export default function Navbar() {
                         }`}
                 >
                     <Image
-                        src={logo}
+                        src={imglogo}
                         alt="CuroAid Healthcare at Home"
                         width={273}
                         height={68}

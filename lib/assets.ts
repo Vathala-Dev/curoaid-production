@@ -237,6 +237,9 @@ export const logo = `${assetPathPrefix}/logo11.webp`;
 export const imgEmail = `${assetPathPrefix}/Email.png`;
 
 export const imgyoutube = `${assetPathPrefix}/youtube.png`;
+export const imglogo = `${assetPathPrefix}/CuroaidLogo.png`;
+
+
 
 
 
