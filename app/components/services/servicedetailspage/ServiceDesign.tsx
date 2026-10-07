@@ -10,6 +10,8 @@ import FAQSection from "../../home/FAQSection";
 import Navbar from "../../home/Navbar";
 import Footer from "../../home/Footer";
 import Link from "next/link";
+import SectionBadge from "../../ui/SectionBadge";
+import BookingModal from "../../ui/BookingModel";
 
 export type ServiceData = {
     hero: {
@@ -99,8 +101,13 @@ export default function ServiceDesign({
     data,
 }: ServiceDesignProps) {
     const [openFaq, setOpenFaq] = useState<number | null>(0);
-
-
+    const [bookingOpen, setBookingOpen] = useState(false);
+    const [selectedService, setSelectedService] = useState("");
+    const openBookingService = (service: string) => {
+        setSelectedService(service);
+        console.log("Selected Service:", service);
+        setBookingOpen(true);
+    };
     return (
         <main className="w-full overflow-hidden bg-white">
             <Navbar />
@@ -133,13 +140,13 @@ export default function ServiceDesign({
                             {/* Badge */}
                             <span
                                 className="
-                        mb-2 inline-flex
-                        rounded-full
-                        bg-[#55d7ef]/90
-                        px-3 py-1
-                        text-[9px] font-medium
-                        sm:mb-3 sm:px-4 sm:py-1.5 sm:text-xs
-                    "
+                                            mb-2 inline-flex
+                                            rounded-full
+                                            bg-[#55d7ef]/90
+                                            px-3 py-1
+                                            text-[9px] font-medium
+                                            sm:mb-3 sm:px-4 sm:py-1.5 sm:text-xs
+                                        "
                             >
                                 {data.hero.badge}
                             </span>
@@ -147,16 +154,16 @@ export default function ServiceDesign({
                             {/* Title */}
                             <h1
                                 className="
-                        mx-auto
-                        max-w-[340px]
-                        text-2xl
-                        font-extrabold
-                        leading-[1.15]
-                        sm:max-w-[600px]
-                        sm:text-4xl
-                        lg:max-w-[760px]
-                        lg:text-5xl
-                    "
+                                          mx-auto
+                                          max-w-[340px]
+                                          text-2xl
+                                          font-extrabold
+                                          leading-[1.15]
+                                          sm:max-w-[600px]
+                                          sm:text-4xl
+                                          lg:max-w-[760px]
+                                          lg:text-5xl
+                                      "
                             >
                                 {data.hero.title}
                             </h1>
@@ -164,17 +171,17 @@ export default function ServiceDesign({
                             {/* Description */}
                             <p
                                 className="
-                        mx-auto
-                        mt-2
-                        max-w-[330px]
-                        text-[11px]
-                        leading-[1.5]
-                        text-white
-                        sm:mt-3
-                        sm:max-w-[600px]
-                        sm:text-sm
-                        sm:leading-6
-                    "
+                                       mx-auto
+                                       mt-2
+                                       max-w-[330px]
+                                       text-[11px]
+                                       leading-[1.5]
+                                       text-white
+                                       sm:mt-3
+                                       sm:max-w-[600px]
+                                       sm:text-sm
+                                       sm:leading-6
+                                   "
                             >
                                 {data.hero.description}
                             </p>
@@ -182,34 +189,35 @@ export default function ServiceDesign({
                             {/* Buttons */}
                             <div
                                 className="
-                                                mt-4
-                                                flex
-                                                flex-wrap
-                                                items-center
-                                                justify-center
-                                                gap-2
-                                                sm:mt-5
-                                                sm:gap-2.5
-                                            "
+                                            mt-4
+                                            flex
+                                            flex-wrap
+                                            items-center
+                                            justify-center
+                                            gap-2
+                                            sm:mt-5
+                                            sm:gap-2.5
+                                         "
                             >
                                 {/* Main CTA */}
                                 <Link href="/contact">
 
-                                    <GradientButton className="
-                                                    h-[40px]
-                                                    rounded-lg
-                                                    bg-[#63c85a]
-                                                    px-4
-                                                    text-[11px]
-                                                    font-semibold
-                                                    text-white
-                                                    shadow-md
-                                                    transition
-                                                    hover:bg-[#54b94c]
-                                                    sm:h-[42px]
-                                                    sm:px-5
-                                                    sm:text-xs
-                                                "label="Book Now" />
+                                    <GradientButton
+                                        className="
+                                                 h-[40px]
+                                                 rounded-lg
+                                                 bg-[#63c85a]
+                                                 px-4
+                                                 text-[11px]
+                                                 font-semibold
+                                                 text-white
+                                                 shadow-md
+                                                 transition
+                                                 hover:bg-[#54b94c]
+                                                 sm:h-[42px]
+                                                 sm:px-5
+                                                 sm:text-xs
+                                             "label={data.hero.button} />
                                 </Link>
 
 
@@ -373,9 +381,23 @@ export default function ServiceDesign({
                         </div>
 
                         <GradientButton
-                            label="Book Now →"
-                            className="mt-15 rounded-lg px-4 py-3 text-xs font-bold"
+                            label={data.introduction.button}
+                            className="
+                                       mt-15
+                                       rounded-lg
+                                       px-8
+                                       py-3
+                                       text-xs
+                                       font-bold
+                                       sm:h-[32px]
+                                       sm:px-5
+                                       sm:text-xs
+                                       lg:h-[42px]
+                                       lg:px-7
+                                       lg:text-sm
+                                     "
                         />
+
 
 
                     </div>
@@ -395,9 +417,11 @@ export default function ServiceDesign({
                     <div className="mb-7 grid items-end gap-5 md:grid-cols-2">
 
                         <div>
-                            <span className="inline-flex rounded-full bg-[#dff8ff] px-3 py-1 text-[9px] font-bold uppercase tracking-wider text-[#36bddb]">
+                            {/* <span className="inline-flex rounded-full bg-[#dff8ff] px-3 py-1 text-[9px] font-bold uppercase tracking-wider text-[#36bddb]">
                                 {data.services.badge}
-                            </span>
+                            </span> */}
+                            <SectionBadge label={data.services.badge} />
+
 
                             <h2 className="mt-2 text-2xl font-extrabold leading-tight text-black sm:text-3xl">
                                 {data.services.title}
@@ -417,23 +441,23 @@ export default function ServiceDesign({
                         {data.services.items.map((item, index) => (
                             <article
                                 key={`${item.title}-${index}`}
-                                className="
-                group
-                overflow-hidden
-                rounded-xl
-                border border-gray-200
-                bg-[#f7f7f7]
-                text-black
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:border-transparent
-                hover:bg-gradient-to-b
-                hover:from-[#4ccce3]
-                hover:to-[#62bd72]
-                hover:text-white
-                hover:shadow-lg
-            "
+                                onClick={() => openBookingService(item.title)}
+                                className="group
+                                            overflow-hidden
+                                            rounded-xl
+                                            border border-gray-200
+                                            bg-[#f7f7f7]
+                                            text-black
+                                            transition-all
+                                            duration-300
+                                            hover:-translate-y-1
+                                            hover:border-transparent
+                                            hover:bg-gradient-to-b
+                                            hover:from-[#4ccce3]
+                                            hover:to-[#62bd72]
+                                            hover:text-white
+                                            hover:shadow-lg
+                                           "
                             >
                                 {/* Card image */}
                                 <div className="p-2">
@@ -445,14 +469,13 @@ export default function ServiceDesign({
                                             height={300}
                                             sizes="(max-width: 640px) 100vw, 33vw"
                                             className="
-        h-auto
-        w-full
-        object-contain
-        transition-transform
-        duration-500
-        group-hover:scale-[1.02]
-      "
-
+                                                       h-auto
+                                                       w-full
+                                                       object-contain
+                                                       transition-transform
+                                                       duration-500
+                                                       group-hover:scale-[1.02]
+                                                     "
                                         />
                                     </div>
                                 </div>
@@ -461,29 +484,29 @@ export default function ServiceDesign({
                                 <div className="px-3 pb-4">
                                     <h3
                                         className="
-                        text-xs
-                        font-extrabold
-                        text-black
-                        transition-colors
-                        duration-300
-                        group-hover:text-white
-                        sm:text-sm
-                    "
+                                                     text-xs
+                                                     font-extrabold
+                                                     text-black
+                                                     transition-colors
+                                                     duration-300
+                                                     group-hover:text-white
+                                                     sm:text-sm
+                                                 "
                                     >
                                         {item.title}
                                     </h3>
 
                                     <p
                                         className="
-                        mt-2
-                        text-[10px]
-                        leading-4
-                        text-gray-600
-                        transition-colors
-                        duration-300
-                        group-hover:text-white/90
-                        sm:text-[11px]
-                    "
+                                                   mt-2
+                                                   text-[10px]
+                                                   leading-4
+                                                   text-gray-600
+                                                   transition-colors
+                                                   duration-300
+                                                   group-hover:text-white/90
+                                                   sm:text-[11px]
+                                               "
                                     >
                                         {item.description}
                                     </p>
@@ -540,6 +563,12 @@ export default function ServiceDesign({
                 items={data.faq.items} />
 
             <Footer />
+
+            <BookingModal
+                isOpen={bookingOpen}
+                onClose={() => setBookingOpen(false)}
+                defaultService={selectedService}
+            />
         </main>
     );
 }

@@ -317,6 +317,8 @@ export const services = [
     { name: "NRI Elder Care", href: "/nri-elder-care" },
     { name: "Veterinary Doctor at Home", href: "veterinary-doctor-home-visit" },
     { name: "Medical Equipment Rental And Sale", href: "/medical-equipment-rental-sale" },
+    { name: "Home Medicine Delivery  ", href: "/home-medicine-delivery" },
+
 
 ];
 

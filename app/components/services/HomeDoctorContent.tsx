@@ -6,7 +6,8 @@ import {
     imgStepIcon1,
     imgStepIcon2,
     imgStepIcon3,
-    imgStepIcon4, tick, doctorImage, doctor1, doctor2, doctor3, doctor4, doctor5, doctor6, doctor7
+    imgStepIcon4, tick, doctorImage, doctor1, doctor2, doctor3, doctor4, doctor5, doctor6, doctor7,
+    imgCtaBanner
 } from "@/lib/assets";
 import ServiceDesign, { ServiceData } from "./servicedetailspage/ServiceDesign";
 
@@ -202,7 +203,7 @@ const doctorAtHomeData: ServiceData = {
         title: "Need a Doctor at Home?",
         description:
             "Get professional medical consultation without leaving your home.",
-        image: doctorBanner,
+        image: imgCtaBanner,
         imageAlt: "Doctor at home",
         button: "Book a Doctor",
     },

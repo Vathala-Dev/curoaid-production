@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface BookingModalProps {
     isOpen: boolean;
@@ -24,14 +24,23 @@ const SERVICES = [
 export default function BookingModal({
     isOpen,
     onClose,
-    defaultService
+    defaultService,
 }: BookingModalProps) {
-    const [selectedService, setSelectedService] =
-        useState(defaultService);
+
+    const [selectedService, setSelectedService] = useState(
+        defaultService || ""
+    );
+
+    // Update selected service whenever a different card is clicked
+    // useEffect(() => {
+    //     setSelectedService(defaultService || "");
+    // }, [defaultService]);
 
     if (!isOpen) return null;
 
-    const handleBookingSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleBookingSubmit = (
+        e: React.FormEvent<HTMLFormElement>
+    ) => {
         e.preventDefault();
 
         const formData = new FormData(e.currentTarget);
@@ -80,7 +89,6 @@ export default function BookingModal({
                     Tell us what you need — we'll take it from here.
                 </p>
 
-                {/* Form */}
                 <form onSubmit={handleBookingSubmit}>
 
                     {/* Service */}

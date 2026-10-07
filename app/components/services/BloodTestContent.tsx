@@ -17,6 +17,7 @@ import {
     imgStepIcon2,
     imgStepIcon3,
     imgStepIcon4,
+    imgCtaBanner,
 } from "@/lib/assets";
 
 export const bloodTestData: ServiceData = {
@@ -205,7 +206,7 @@ export const bloodTestData: ServiceData = {
         title: "Need a Blood Test at Home?",
         description:
             "Make diagnostic sample collection easier with convenient home blood testing from CuroAid.",
-        image: bloodTestBanner,
+        image: imgCtaBanner,
         imageAlt: "Blood test sample collection at home",
         button: "Book Blood Test",
     },

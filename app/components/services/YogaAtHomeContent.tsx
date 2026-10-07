@@ -18,6 +18,10 @@ import {
   imgStepIcon2,
   imgStepIcon3,
   imgStepIcon4,
+  yoga11,
+  yoga12,
+  yoga10,
+  imgCtaBanner,
 } from "@/lib/assets";
 
 export const yogaAtHomeData: ServiceData = {
@@ -108,6 +112,27 @@ export const yogaAtHomeData: ServiceData = {
           "Regular yoga sessions to help you build a consistent movement and wellness routine.",
         image: yoga9,
         imageAlt: "Wellness yoga at home",
+      },
+      {
+        title: "Prenatal Yoga",
+        description:
+          "Gentle yoga sessions designed to support a comfortable pregnancy, improve flexibility, and prepare your body for childbirth.",
+        image: yoga11,
+        imageAlt: "Prenatal yoga session at home",
+      },
+      {
+        title: "Postnatal Yoga",
+        description:
+          "Personalized yoga sessions designed to support postpartum recovery, rebuild strength, improve flexibility, and promote overall wellness.",
+        image: yoga10,
+        imageAlt: "Postnatal yoga session at home",
+      },
+      {
+        title: "Lactation Therapy",
+        description:
+          "Expert guidance to support comfortable breastfeeding, improve feeding techniques, and address common lactation concerns.",
+        image: yoga12,
+        imageAlt: "Lactation therapy support at home",
       },
     ],
   },
@@ -212,7 +237,7 @@ export const yogaAtHomeData: ServiceData = {
     title: "Ready to Start Yoga at Home?",
     description:
       "Build a comfortable and personalised yoga routine with professional guidance from CuroAid.",
-    image: yogaBanner,
+    image: imgCtaBanner,
     imageAlt: "Personalised yoga classes at home",
     button: "Book Yoga Session",
   },

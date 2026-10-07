@@ -18,6 +18,7 @@ import {
   imgStepIcon2,
   imgStepIcon3,
   imgStepIcon4,
+  imgCtaBanner,
 } from "@/lib/assets";
 
 export const elderCareData: ServiceData = {
@@ -212,7 +213,7 @@ export const elderCareData: ServiceData = {
     title: "Need Reliable Elder Care at Home?",
     description:
       "Give your elderly loved ones compassionate support and care in the comfort of their home.",
-    image: elderCareBanner,
+    image: imgCtaBanner,
     imageAlt: "Elder care at home",
     button: "Book Elder Care",
   },

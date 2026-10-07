@@ -17,6 +17,7 @@ import {
   imgStepIcon2,
   imgStepIcon3,
   imgStepIcon4,
+  imgCtaBanner,
 } from "@/lib/assets";
 
 export const nriElderCareData: ServiceData = {
@@ -206,7 +207,7 @@ export const nriElderCareData: ServiceData = {
     title: "Worried About Your Parents Back Home?",
     description:
       "CuroAid helps NRI families coordinate reliable elder care and healthcare support for their loved ones in India.",
-    image: nriElderCareBanner,
+    image: imgCtaBanner,
     imageAlt: "NRI elder care support in India",
     button: "Book Elder Care",
   },

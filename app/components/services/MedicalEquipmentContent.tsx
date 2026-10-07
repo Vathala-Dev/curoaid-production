@@ -11,7 +11,7 @@ import {
   equipment6,
   equipment7,
   equipment8,
-  
+  imgCtaBanner,
   imgWhyChoose,
   tick,
   imgStepIcon1,
@@ -206,7 +206,7 @@ export const medicalEquipmentData: ServiceData = {
     title: "Need Medical Equipment at Home?",
     description:
       "Rent or purchase suitable medical equipment for your home healthcare requirements with CuroAid.",
-    image: medicalEquipmentBanner,
+    image: imgCtaBanner,
     imageAlt: "Medical equipment rental and sale",
     button: "Enquire Now",
   },
