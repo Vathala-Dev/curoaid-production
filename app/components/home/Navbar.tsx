@@ -304,6 +304,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import GradientButton from "../ui/GradientButton";
+import { useBooking } from "../booking/bookingprovider";
 
 
 export const services = [
@@ -354,6 +355,7 @@ export default function Navbar() {
             return nextState;
         });
     };
+    const{openBooking} = useBooking();
 
     return (
         <header className="relative z-50 w-full transition-all duration-300">
@@ -454,6 +456,7 @@ export default function Navbar() {
                     <GradientButton
                         className="px-4 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm"
                         label="Book Now"
+                        onClick={() => openBooking()}
                     />
                 </Link>
 

@@ -13,6 +13,7 @@ import type {
 } from "@/lib/blogs";
 import GradientButton from "../ui/GradientButton";
 import FAQSection from "../home/FAQSection";
+import { useBooking } from "../booking/bookingprovider";
 
 /* =========================================================
    PROPS
@@ -99,7 +100,7 @@ export default function BlogDetailsPage({
     blog,
     relatedBlogs,
 }: BlogDetailsPageProps) {
-
+    const { openBooking } = useBooking();
     const [openFaq, setOpenFaq] = useState(0);
 
     const faqs =
@@ -160,12 +161,12 @@ export default function BlogDetailsPage({
                                     "Get trusted healthcare information, practical guidance and expert advice from the CuroAid team."}
                             </p>
 
-                            <Link
-                                href="/contact"
+                            <div
+                                onClick={() => openBooking()}
                                 className="inline-flex mt-3 "
                             >
                                 <GradientButton label="Book Now" />
-                            </Link>
+                            </div>
 
                         </div>
 
@@ -275,97 +276,71 @@ export default function BlogDetailsPage({
                     ================================================= */}
 
                     <aside>
-
                         <div className="lg:sticky lg:top-24">
 
-                            <span className="inline-flex bg-[#dff8ff] px-3 py-1 text-[8px] font-semibold text-[#42c4e6] sm:text-[9px]">
+                            <span className="inline-flex bg-[#dff8ff] px-3 py-1 text-[12px] font-semibold text-[#42c4e6] sm:text-[9px] lg:text-[13px]">
                                 Related Blogs
                             </span>
 
                             <div className="mt-3 space-y-4">
-
                                 {relatedBlogs
                                     .slice(0, 2)
-                                    .map(
-                                        (
-                                            relatedBlog
-                                        ) => (
-
-                                            <article
-                                                key={
-                                                    relatedBlog._id
-                                                }
-                                                className="
-                                                    overflow-hidden
-                                                    rounded-[11px]
-                                                    border
-                                                    border-[#e1e1e1]
-                                                    bg-[#f6f6f6]
-                                                    p-2
-                                                    transition
-                                                    duration-300
-                                                    hover:-translate-y-1
-                                                    hover:border-[#4cc6f0]
-                                                    hover:bg-[#f0fcff]
-                                                    hover:shadow-md
-                                                "
+                                    .map((relatedBlog) => (
+                                        <article
+                                            key={relatedBlog._id}
+                                            className="
+              overflow-hidden
+              rounded-[11px]
+              border
+              border-[#e1e1e1]
+              bg-[#f6f6f6]
+              p-2
+              transition
+              duration-300
+              hover:-translate-y-1
+              hover:border-[#4cc6f0]
+              hover:bg-[#f0fcff]
+              hover:shadow-md
+            "
+                                        >
+                                            <Link
+                                                href={`/blogs/${relatedBlog.slug}`}
+                                                className="relative block h-[125px] overflow-hidden rounded-[8px]"
                                             >
+                                                <Image
+                                                    src={relatedBlog.imageUrl}
+                                                    alt={relatedBlog.title}
+                                                    fill
+                                                    sizes="270px"
+                                                    className="object-cover transition duration-500 hover:scale-[1.03]"
+                                                />
+                                            </Link>
+
+                                            <div className="px-1 pb-1 pt-2">
+
+                                                <h3 className="line-clamp-2 text-[10px] font-bold leading-[1.4] text-[#111] lg:text-[12px]">
+                                                    {relatedBlog.title}
+                                                </h3>
+
+                                                <p className="mt-1 line-clamp-3 text-[8px] leading-[1.5] text-[#666] lg:text-[10px]">
+                                                    {relatedBlog.metaDescription ||
+                                                        "Read more about healthcare and home care services."}
+                                                </p>
 
                                                 <Link
                                                     href={`/blogs/${relatedBlog.slug}`}
-                                                    className="relative block h-[125px] overflow-hidden rounded-[8px]"
+                                                    className="mt-2 inline-flex items-center gap-1 text-[8px] font-semibold text-[#43c4e3] lg:text-[10px]"
                                                 >
-
-                                                    <Image
-                                                        src={
-                                                            relatedBlog.imageUrl
-                                                        }
-                                                        alt={
-                                                            relatedBlog.title
-                                                        }
-                                                        fill
-                                                        sizes="270px"
-                                                        className="object-cover transition duration-500 hover:scale-[1.03]"
-                                                    />
-
+                                                    Read More
+                                                    <span>→</span>
                                                 </Link>
 
-                                                <div className="px-1 pb-1 pt-2">
-
-                                                    <h3 className="line-clamp-2 text-[10px] font-bold leading-[1.4] text-[#111]">
-                                                        {
-                                                            relatedBlog.title
-                                                        }
-                                                    </h3>
-
-                                                    <p className="mt-1 line-clamp-3 text-[8px] leading-[1.5] text-[#666]">
-                                                        {
-                                                            relatedBlog.metaDescription ||
-                                                            "Read more about healthcare and home care services."
-                                                        }
-                                                    </p>
-
-                                                    <Link
-                                                        href={`/blogs/${relatedBlog.slug}`}
-                                                        className="mt-2 inline-flex items-center gap-1 text-[8px] font-semibold text-[#43c4e3]"
-                                                    >
-                                                        Read More
-                                                        <span>
-                                                            →
-                                                        </span>
-                                                    </Link>
-
-                                                </div>
-
-                                            </article>
-
-                                        )
-                                    )}
-
+                                            </div>
+                                        </article>
+                                    ))}
                             </div>
 
                         </div>
-
                     </aside>
 
                 </div>
@@ -406,13 +381,13 @@ export default function BlogDetailsPage({
                             healthcare.
                         </p>
 
-                        <Link
-                            href="/contact"
+                        <div
+                            onClick={() => openBooking()}
                             className="mt-4 flex items-center gap-2 rounded-md bg-[#55c5ed] px-5 py-2.5 text-[9px] font-semibold text-white shadow-md transition hover:bg-[#43b7df]"
                         >
                             Book Free Consultation
                             <span>→</span>
-                        </Link>
+                        </div>
 
                     </div>
 

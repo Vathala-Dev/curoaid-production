@@ -11,6 +11,7 @@ import type { Blog } from "@/lib/blogs";
 import { blogBanner, blogCTA } from "@/lib/assets";
 import GradientButton from "../ui/GradientButton";
 import FAQSection from "../home/FAQSection";
+import { useBooking } from "../booking/bookingprovider";
 
 /* =========================================================
    PAGINATION
@@ -283,7 +284,7 @@ export default function BlogListPage({
         },
         (_, index) => index + 1
     );
-
+    const { openBooking } = useBooking();
     return (
         <main className="min-h-screen bg-white text-[#111111]">
 
@@ -341,21 +342,25 @@ export default function BlogListPage({
                         >
                             {/* Main CTA */}
 
-                            <GradientButton className="
-                                                    h-[40px]
-                                                    rounded-lg
-                                                    bg-[#63c85a]
-                                                    px-4
-                                                    text-[11px]
-                                                    font-semibold
-                                                    text-white
-                                                    shadow-md
-                                                    transition
-                                                    hover:bg-[#54b94c]
-                                                    sm:h-[42px]
-                                                    sm:px-5
-                                                    sm:text-xs
-                                                "label="Book Now" />
+                            <GradientButton
+                                onClick={() => openBooking()}
+                                className="
+                                    h-[40px]
+                                    rounded-lg
+                                    bg-[#63c85a]
+                                    px-4
+                                    text-[11px]
+                                    font-semibold
+                                    text-white
+                                    shadow-md
+                                    transition
+                                    hover:bg-[#54b94c]
+                                    sm:h-[42px]
+                                    sm:px-5
+                                    sm:text-xs
+                                "
+
+                                label="Book Now" />
 
 
                             {/* Google Play */}
@@ -810,13 +815,13 @@ export default function BlogListPage({
                             healthcare.
                         </p>
 
-                        <Link
-                            href="/contact"
+                        <div
                             className="mt-4 flex items-center gap-2 rounded-md bg-[#55c5ed] px-5 py-2.5 text-[9px] font-semibold text-white shadow-md transition hover:bg-[#43b7df]"
+                            onClick={() => openBooking()}
                         >
                             Book Free Consultation
                             <span>→</span>
-                        </Link>
+                        </div>
 
                     </div>
 

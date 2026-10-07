@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useBooking } from "../booking/bookingprovider";
+import GradientButton from "../ui/GradientButton";
 
 export interface AboutPageData {
     hero: {
@@ -56,6 +58,7 @@ interface AboutPageProps {
 }
 
 export default function AboutPage1({ data }: AboutPageProps) {
+    const { openBooking } = useBooking();
     return (
         <main className="w-full bg-white">
 
@@ -91,14 +94,21 @@ export default function AboutPage1({ data }: AboutPageProps) {
                             {data.hero.description}
                         </p>
 
-                        {data.hero.button && (
-                            <Link
-                                href="/contact"
+                        {/* {data.hero.button && (
+                            <div
+                                onClick={() => openBooking()}
                                 className="mt-6 rounded-lg bg-[#74c067] px-7 py-3 text-sm font-semibold text-white transition hover:scale-105"
                             >
                                 {data.hero.button} →
-                            </Link>
-                        )}
+                            </div>
+                        )} */}
+                        <GradientButton
+                            onClick={() => openBooking()}
+                            className="mt-6"
+                            label={data.hero.button || ""}
+                        />
+
+
                     </div>
                 </div>
             </section>
@@ -135,14 +145,19 @@ export default function AboutPage1({ data }: AboutPageProps) {
                             </p>
                         )}
 
-                        {data.about.button && (
+                        {/* {data.about.button && (
                             <Link
                                 href="/contact"
-                                className="mt-6 inline-block rounded-lg bg-gradient-to-r from-[#4cc6f0] to-[#74c067] px-6 py-3 text-sm font-semibold text-white"
+
                             >
                                 {data.about.button} →
                             </Link>
-                        )}
+                        )} */}
+                        <GradientButton
+                            onClick={() => openBooking()}
+                            className="mt-4 inline-block rounded-lg bg-gradient-to-r from-[#4cc6f0] to-[#74c067] px-4 py-3 text-sm font-semibold text-white"
+                            label={data.hero.button || ""}
+                        />
                     </div>
 
                 </div>

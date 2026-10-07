@@ -12,6 +12,7 @@ import Footer from "../../home/Footer";
 import Link from "next/link";
 import SectionBadge from "../../ui/SectionBadge";
 import BookingModal from "../../ui/BookingModel";
+import { useBooking } from "../../booking/bookingprovider";
 
 export type ServiceData = {
     hero: {
@@ -108,6 +109,8 @@ export default function ServiceDesign({
         console.log("Selected Service:", service);
         setBookingOpen(true);
     };
+
+    const { openBooking } = useBooking();
     return (
         <main className="w-full overflow-hidden bg-white">
             <Navbar />
@@ -200,7 +203,6 @@ export default function ServiceDesign({
                                          "
                             >
                                 {/* Main CTA */}
-                                <Link href="/contact">
 
                                     <GradientButton
                                         className="
@@ -217,8 +219,9 @@ export default function ServiceDesign({
                                                  sm:h-[42px]
                                                  sm:px-5
                                                  sm:text-xs
-                                             "label={data.hero.button} />
-                                </Link>
+                                             "
+                                             onClick={() => openBooking()}
+                                             label={data.hero.button} />
 
 
                                 {/* Google Play */}
@@ -381,6 +384,7 @@ export default function ServiceDesign({
                         </div>
 
                         <GradientButton
+                        onClick={() => openBooking()}
                             label={data.introduction.button}
                             className="
                                        mt-15

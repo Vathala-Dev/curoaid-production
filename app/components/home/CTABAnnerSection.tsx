@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { imgVectorWhite } from "@/lib/assets";
+import { useBooking } from "../booking/bookingprovider";
 
 type CTA = {
   ctabanner: string;
@@ -17,6 +18,9 @@ export default function CTABannerSection({
   ctadescription,
   buttonlabel,
 }: CTA) {
+
+
+  const { openBooking } = useBooking();
   return (
     <section
       aria-labelledby="cta-title"
@@ -57,6 +61,7 @@ export default function CTABannerSection({
 
         <button
           type="button"
+          onClick={() => openBooking()}
           className="inline-flex items-center gap-2 rounded-xl bg-[#4cc6f0] px-10 py-4 text-sm font-bold text-white shadow-lg transition-opacity hover:opacity-90"
         >
           {buttonlabel}

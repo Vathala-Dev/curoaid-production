@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import GradientButton from "../ui/GradientButton";
+import { useBooking } from "../booking/bookingprovider";
 
 export interface TeamMember {
     name: string;
@@ -50,6 +52,7 @@ interface OurTeamPageProps {
 export default function OurTeamPage({
     data,
 }: OurTeamPageProps) {
+    const { openBooking } = useBooking();
     return (
         <main className="w-full bg-white">
 
@@ -83,14 +86,19 @@ export default function OurTeamPage({
                             {data.hero.description}
                         </p>
 
-                        {data.hero.button && (
+                        {/* {data.hero.button && (
                             <Link
                                 href="/contact"
                                 className="mt-6 rounded-lg bg-[#74c067] px-7 py-3 text-sm font-semibold text-white transition hover:scale-105"
                             >
                                 {data.hero.button} →
                             </Link>
-                        )}
+                        )} */}
+                        <GradientButton
+                            onClick={() => openBooking()}
+                            className="mt-6"
+                            label={data.hero.button || ""}
+                        />
 
                     </div>
                 </div>
@@ -219,12 +227,13 @@ export default function OurTeamPage({
                             {data.cta.description}
                         </p>
 
-                        <Link
+                        {/* <Link
                             href="/contact"
                             className="mt-6 inline-block rounded-lg bg-white px-7 py-3 text-sm font-semibold text-gray-800 transition hover:scale-105"
                         >
                             {data.cta.button} →
-                        </Link>
+                        </Link> */}
+                        <GradientButton className="mt-6 inline-block rounded-lg bg-white px-7 py-3 text-sm font-semibold text-gray-800 transition hover:scale-105" onClick={() => openBooking()} label={data.cta.button || ""} />
 
                     </div>
                 </section>
