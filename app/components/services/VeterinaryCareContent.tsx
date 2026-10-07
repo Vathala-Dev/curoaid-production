@@ -11,7 +11,7 @@ import {
   veterinary6,
   veterinary7,
   veterinary8,
-  
+  imgCtaBanner,
   imgWhyChoose,
   tick,
   imgStepIcon1,
@@ -206,7 +206,7 @@ export const veterinaryCareData: ServiceData = {
     title: "Need a Veterinary Doctor at Home?",
     description:
       "Get convenient professional veterinary support for your pet without unnecessary travel.",
-    image: veterinaryBanner,
+    image: imgCtaBanner,
     imageAlt: "Veterinary doctor at home",
     button: "Book Veterinary Care",
   },

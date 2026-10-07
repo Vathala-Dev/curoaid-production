@@ -4,10 +4,18 @@ export const assetPathPrefix = "/assets";
 export const imgFinalisedLogo1 = `${assetPathPrefix}/57aec.png`;
 export const imgHero = `${assetPathPrefix}/33e15.png`;
 export const imgWhoWeAre = `${assetPathPrefix}/d06a5.png`;
-export const imgDoctorAtHome = `${assetPathPrefix}/2c7d9.png`;
-export const imgHomeNursing = `${assetPathPrefix}/908e9.png`;
-export const imgPhysiotherapy = `${assetPathPrefix}/77cee.png`;
+export const imgDoctorAtHome = `${assetPathPrefix}/imgDoctorAtHome.webp`;
+export const imgHomeNursing = `${assetPathPrefix}/imgHomeNursing.webp`;
+export const imgPhysiotherapy = `${assetPathPrefix}/imgPhysiotherapy.webp`;
+export const imgEldercare = `${assetPathPrefix}/imgEldercare.webp`;
+export const imgNRI = `${assetPathPrefix}/imgNRI.webp`;
+
+export const imgWoundCare = `${assetPathPrefix}/imgWoundCare.webp`;
+
+
+
 export const imgHowToBook = `${assetPathPrefix}/3e0f7.png`;
+
 export const imgWhyChoose = `${assetPathPrefix}/7764f.png`;
 export const imgBlog = `${assetPathPrefix}/8a183.png`;
 export const imgCtaBanner = `${assetPathPrefix}/4b732.png`;
@@ -167,6 +175,11 @@ export const yoga6 = `${assetPathPrefix}/yoga6.webp`;
 export const yoga7 = `${assetPathPrefix}/yoga7.webp`;
 export const yoga8 = `${assetPathPrefix}/yoga8.webp`;
 export const yoga9 = `${assetPathPrefix}/yoga9.webp`;
+export const yoga10 = `${assetPathPrefix}/yoga10.webp`;
+
+export const yoga11 = `${assetPathPrefix}/yoga11.webp`;
+export const yoga12 = `${assetPathPrefix}/yoga12.webp`;
+
 
 
 export const veterinaryBanner = `${assetPathPrefix}/veterinaryBanner.webp`;
@@ -237,6 +250,9 @@ export const logo = `${assetPathPrefix}/logo11.webp`;
 export const imgEmail = `${assetPathPrefix}/Email.png`;
 
 export const imgyoutube = `${assetPathPrefix}/youtube.png`;
+export const imglogo = `${assetPathPrefix}/CuroaidLogo.png`;
+
+
 
 
 

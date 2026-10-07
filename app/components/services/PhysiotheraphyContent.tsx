@@ -1,4 +1,4 @@
-import { physiotherapyBanner, physiotherapyImage, physio1, physio2, physio3, physio4, physio5, physio6, physio7, physio8, physio9, tick, imgStepIcon1, imgStepIcon2, imgStepIcon3, imgStepIcon4 } from "@/lib/assets";
+import { physiotherapyBanner, physiotherapyImage, physio1, physio2, physio3, physio4, physio5, physio6, physio7, physio8, physio9, tick, imgStepIcon1, imgStepIcon2, imgStepIcon3, imgStepIcon4, imgCtaBanner } from "@/lib/assets";
 import ServiceDesign, { ServiceData } from "./servicedetailspage/ServiceDesign";
 
 const physiotherapyData: ServiceData = {
@@ -195,7 +195,7 @@ const physiotherapyData: ServiceData = {
         title: "Need Physiotherapy at Home?",
         description:
             "Get personalised physiotherapy and rehabilitation support without leaving your home.",
-        image: physiotherapyBanner,
+        image: imgCtaBanner,
         imageAlt: "Physiotherapy care at home",
         button: "Book Physiotherapy",
     },

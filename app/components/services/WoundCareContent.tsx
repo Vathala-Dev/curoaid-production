@@ -18,6 +18,7 @@ import {
   imgStepIcon2,
   imgStepIcon3,
   imgStepIcon4,
+  imgCtaBanner,
 } from "@/lib/assets";
 
 export const woundCareData: ServiceData = {
@@ -212,7 +213,7 @@ export const woundCareData: ServiceData = {
     title: "Need Wound Care at Home?",
     description:
       "Get convenient professional wound dressing and care support at your doorstep with CuroAid.",
-    image: woundCareBanner,
+    image: imgCtaBanner,
     imageAlt: "Wound care service at home",
     button: "Book Wound Care",
   },

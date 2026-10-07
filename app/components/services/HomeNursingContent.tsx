@@ -1,5 +1,5 @@
 import ServiceDesign, { ServiceData, } from "./servicedetailspage/ServiceDesign";
-import { l12, l10, l11, l2, l3, l4, l5, l6, l8, l9, nursebanner, r1, l1, imgWhyChoose, tick } from "@/lib/assets";
+import { l12, l10, l11, l2, l3, l4, l5, l6, l8, l9, nursebanner, r1, l1, imgWhyChoose, tick, imgCtaBanner } from "@/lib/assets";
 import {
   imgStepIcon1,
   imgStepIcon2,
@@ -31,88 +31,89 @@ const homeNursingData: ServiceData = {
     badge: "SERVICES",
     title: "Our Home Nursing Services",
     description:
-      "Complete care, designed around your needs.",
+      "From recovery and rehabilitation to long-term healthcare support, Curoaid provides personalised nursing care to help patients and families manage healthcare needs comfortably at home.",
     items: [
       {
         title: "Elderly Nursing Care",
         description:
-          "Compassionate nursing support for seniors who need ongoing assistance.",
-        image:
-          l3,
+          "Compassionate nursing support for senior citizens who require assistance with their healthcare and daily needs at home.",
+        image: l3,
         imageAlt: "Elderly nursing care",
       },
-
       {
-        title: "Post-Hospitalisation Nursing Care",
+        title: "Post-Hospitalization Nursing Care",
         description:
-          "Reliable professional nursing assistance during recovery.",
-        image:
-          l4,
-        imageAlt: "Post hospitalisation care",
+          "Receive professional nursing assistance after hospital discharge to support a safe and comfortable recovery at home.",
+        image: l4,
+        imageAlt: "Post hospitalization nursing care",
         featured: true,
       },
       {
-        title: "Post-Hospitalisation Nursing Care",
+        title: "Chronic Disease Care",
         description:
-          "Reliable professional nursing assistance during recovery.",
-        image:
-          l5,
-        imageAlt: "Post hospitalisation care",
+          "Ongoing nursing support for patients managing long-term conditions such as diabetes, hypertension, and other chronic health concerns.",
+        image: l5,
+        imageAlt: "Chronic disease care",
         featured: true,
       },
       {
-        title: "Post-Hospitalisation Nursing Care",
+        title: "Post-Surgical Care",
         description:
-          "Reliable professional nursing assistance during recovery.",
-        image:
-          l6,
-        imageAlt: "Post hospitalisation care",
+          "Get dedicated nursing assistance during the recovery period following surgery, including routine monitoring and care support.",
+        image: l6,
+        imageAlt: "Post surgical care",
         featured: true,
-      }, {
-        title: "Post-Hospitalisation Nursing Care",
+      },
+      // {
+      //   title: "Medication Assistance",
+      //   description:
+      //     "Professional support with medication schedules and administration as prescribed by your doctor.",
+      //   image: l1,
+      //   imageAlt: "Medication assistance",
+      //   featured: true,
+      // },
+      {
+        title: "Wound & Dressing Care",
         description:
-          "Reliable professional nursing assistance during recovery.",
-        image:
-          l8,
-        imageAlt: "Post hospitalisation care",
-        featured: true,
-      }, {
-        title: "Post-Hospitalisation Nursing Care",
-        description:
-          "Reliable professional nursing assistance during recovery.",
-        image:
-          l9,
-        imageAlt: "Post hospitalisation care",
-        featured: true,
-      }, {
-        title: "Post-Hospitalisation Nursing Care",
-        description:
-          "Reliable professional nursing assistance during recovery.",
-        image:
-          l10,
-        imageAlt: "Post hospitalisation care",
-        featured: true,
-      }, {
-        title: "Post-Hospitalisation Nursing Care",
-        description:
-          "Reliable professional nursing assistance during recovery.",
-        image:
-          l11,
-        imageAlt: "Post hospitalisation care",
+          "Receive appropriate nursing support for wound care, dressing changes, and recovery-related healthcare needs at home.",
+        image: l8,
+        imageAlt: "Wound and dressing care",
         featured: true,
       },
       {
-        title: "Post-Hospitalisation Nursing Care",
+        title: "Vital Signs Monitoring",
         description:
-          "Reliable professional nursing assistance during recovery.",
-        image:
-          l12,
-        imageAlt: "Post hospitalisation care",
+          "Regular monitoring of essential health parameters such as blood pressure, temperature, pulse, and oxygen levels as required.",
+        image: l9,
+        imageAlt: "Vital signs monitoring",
         featured: true,
       },
-
-      // Add remaining cards...
+      {
+        title: "Personal Care Assistance",
+        description:
+          "Support with everyday personal care needs for individuals who require additional assistance during recovery or due to limited mobility.",
+        image: l10,
+        imageAlt: "Personal care assistance",
+        featured: true,
+      },
+      {
+        title: "Bedridden Patient Care",
+        description:
+          "Compassionate nursing support for patients who are bedridden and require regular attention and assistance at home.",
+        image: l11,
+        imageAlt: "Bedridden patient care",
+        featured: true,
+      },
+      {
+        title: "Family Healthcare Support",
+        description:
+          "Reliable nursing assistance that helps families manage the healthcare needs of their loved ones with greater comfort and confidence.",
+        image: l12,
+        imageAlt: "Family healthcare support",
+        featured: true,
+      },
     ],
+
   },
 
   whyChoose: {
@@ -219,7 +220,7 @@ const homeNursingData: ServiceData = {
     description:
       "CuroAid brings trusted healthcare to your doorstep.",
     image:
-      nursebanner,
+      imgCtaBanner,
     imageAlt: "Healthcare at home",
     button: "Book Free Consultation",
   },

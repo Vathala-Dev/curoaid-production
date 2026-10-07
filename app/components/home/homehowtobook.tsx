@@ -72,7 +72,7 @@ export const homeWhyChoose = {
     description: (
         <>
             At CuroAid, we believe healthcare should be more than just a
-            service — it should provide{" "}
+            service  it should provide{" "}
             <strong className="font-semibold text-black">
                 comfort, trust, dignity, and peace of mind.
             </strong>{" "}
@@ -103,7 +103,7 @@ export const homeWhyChoose = {
             icon: imgGroup38,
             title: "Complete Home Healthcare",
             description:
-                "From Doctor at Home and nursing to physiotherapy, elder care, wound care, diagnostics, and more — access a wide range of services in one place.",
+                "From Doctor at Home and nursing to physiotherapy, elder care, wound care, diagnostics, and more access a wide range of services in one place.",
         },
         {
             icon: imgGroup40,

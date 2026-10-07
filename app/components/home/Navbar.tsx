@@ -298,7 +298,7 @@
 
 "use client";
 
-import { imgFinalisedLogo1, logo } from "@/lib/assets";
+import { imgFinalisedLogo1, imglogo, logo } from "@/lib/assets";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -317,6 +317,8 @@ export const services = [
     { name: "NRI Elder Care", href: "/nri-elder-care" },
     { name: "Veterinary Doctor at Home", href: "veterinary-doctor-home-visit" },
     { name: "Medical Equipment Rental And Sale", href: "/medical-equipment-rental-sale" },
+    { name: "Home Medicine Delivery  ", href: "/home-medicine-delivery" },
+
 
 ];
 
@@ -368,7 +370,7 @@ export default function Navbar() {
                         }`}
                 >
                     <Image
-                        src={logo}
+                        src={imglogo}
                         alt="CuroAid Healthcare at Home"
                         width={273}
                         height={68}
