@@ -67,6 +67,7 @@ import { Poppins } from "next/font/google";
 
 import "./globals.css";
 import { BookingProvider } from "./components/booking/bookingprovider";
+import { imgDoctorAtHome } from "@/lib/assets";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -93,6 +94,14 @@ export const metadata: Metadata = {
     url: "https://curoaid.com",
     siteName: "CuroAid",
     type: "website",
+    images: [
+      {
+        url: imgDoctorAtHome,
+        width: 1200,
+        height: 630,
+        alt: "CuroAid Doctor at Home Services",
+      },
+    ],
   },
   robots: {
     index: true,
