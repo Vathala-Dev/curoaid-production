@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import NriElderCareContent from "@/app/components/services/NriElderCareContent";
+import { nriElderCareImage } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "NRI Elder Care Services in India | CuroAid",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/images/services/nri-elder-care/og-image.jpg",
+        url: nriElderCareImage,
         width: 1200,
         height: 630,
         alt: "CuroAid NRI Elder Care Services in India",

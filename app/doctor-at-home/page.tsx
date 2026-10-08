@@ -1,6 +1,7 @@
 
 
 import HomeDoctorContent from "@/app/components/services/HomeDoctorContent";
+import { imgDoctorAtHome } from "@/lib/assets";
 
 
 import type { Metadata } from "next";
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/images/services/doctor-at-home/og-image.jpg",
+        url: imgDoctorAtHome,
         width: 1200,
         height: 630,
         alt: "CuroAid Doctor at Home Services",

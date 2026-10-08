@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HomeMedicineDeliveryContent from "@/app/components/services/HomeMedicineDeliveryContent";
+import { medicineImage } from "@/lib/assets";
 
 export const metadata: Metadata = {
     title: "Home Medicine Delivery | CuroAid",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
 
         images: [
             {
-                url: "/images/services/home-medicine-delivery/og-image.jpg",
+                url: medicineImage,
                 width: 1200,
                 height: 630,
                 alt: "CuroAid Home Medicine Delivery",

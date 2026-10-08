@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import MedicalEquipmentContent from "@/app/components/services/MedicalEquipmentContent";
+import { medicalEquipmentImage } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "Medical Equipment Rental & Sale | CuroAid",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/images/services/medical-equipment/og-image.jpg",
+        url: medicalEquipmentImage,
         width: 1200,
         height: 630,
         alt: "CuroAid Medical Equipment Rental and Sale",

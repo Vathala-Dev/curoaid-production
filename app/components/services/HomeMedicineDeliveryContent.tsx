@@ -20,6 +20,8 @@ import {
     imgStepIcon3,
     imgStepIcon4,
     imgCtaBanner,
+    medicineImage,
+    medicineBannerImage,
 } from "@/lib/assets";
 
 const homeMedicineDeliveryData: ServiceData = {
@@ -31,7 +33,7 @@ const homeMedicineDeliveryData: ServiceData = {
         title: "Home Medicine Delivery at Your Doorstep",
         description:
             "Get your medicines delivered conveniently to your home, making it easier to manage your healthcare without unnecessary trips to a pharmacy.",
-        image: nursebanner,
+        image: medicineImage,
         imageAlt: "Home medicine delivery service",
         button: "Order Medicines",
     },
@@ -43,7 +45,7 @@ const homeMedicineDeliveryData: ServiceData = {
         title: "CuroAid Home Medicine Delivery",
         description:
             "At CuroAid Home Healthcare, we believe getting your medicines should be simple, convenient, and reliable. Our Home Medicine Delivery Service helps you receive your required medicines at your doorstep, so you can focus on your health without the hassle of visiting a pharmacy.",
-        image: r1,
+        image: medicineBannerImage,
         imageAlt: "CuroAid home medicine delivery",
         button: "Order Now",
     },

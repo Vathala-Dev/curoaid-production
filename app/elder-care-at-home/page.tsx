@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ElderCareContent from "@/app/components/services/ElderCareContent";
+import { elderCareImage } from "@/lib/assets";
 
 export const metadata: Metadata = {
     title: "Elder Care Services at Home | CuroAid",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 
         images: [
             {
-                url: "/images/services/elder-care/og-image.jpg",
+                url: elderCareImage,
                 width: 1200,
                 height: 630,
                 alt: "CuroAid Elder Care Services",

@@ -252,6 +252,11 @@ export const imgEmail = `${assetPathPrefix}/Email.png`;
 export const imgyoutube = `${assetPathPrefix}/youtube.png`;
 export const imglogo = `${assetPathPrefix}/CuroaidLogo.png`;
 
+export const medicineImage = `${assetPathPrefix}/medicineImage.webp`;
+export const medicineBannerImage = `${assetPathPrefix}/medicineBannerImage.webp`;
+
+
+
 
 
 

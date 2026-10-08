@@ -1,3 +1,4 @@
+import { imgPhysiotherapy } from "@/lib/assets";
 import PhysiotherapyContent from "../components/services/PhysiotheraphyContent";
 import type { Metadata } from "next";
 
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
 
         images: [
             {
-                url: "/images/services/physiotherapy/og-image.jpg",
+                url: imgPhysiotherapy,
                 width: 1200,
                 height: 630,
                 alt: "CuroAid Physiotherapy at Home Services",
