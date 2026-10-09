@@ -28,9 +28,9 @@ export async function generateMetadata({
 
     if (!blog) {
         return {
-            title: "Blog | CuroAid",
+            title: "Healthcare Blogs | Health Tips & Expert Advice – CuroAid",
             description:
-                "Healthcare information and expert guidance from CuroAid.",
+                "Explore CuroAid healthcare blogs for expert health tips, home healthcare advice, wellness guidance, elderly care insights and practical information to support your family's well-being.",
         };
     }
 

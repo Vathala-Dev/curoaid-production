@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     ],
 
     openGraph: {
-        title: "Physiotherapy at Home | CuroAid",
+        title: "Physiotherapy at Home | Expert Care – CuroAid",
 
         description:
-            "Professional physiotherapy and rehabilitation care delivered to your doorstep.",
+            "Get physiotherapy at home with CuroAid. Receive personalised treatment, rehabilitation support and expert physiotherapy care to improve mobility and recovery.",
 
         images: [
             {

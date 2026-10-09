@@ -3,10 +3,10 @@ import YogaAtHomeContent from "@/app/components/services/YogaAtHomeContent";
 import { yogaImage } from "@/lib/assets";
 
 export const metadata: Metadata = {
-  title: "Yoga Classes at Home | CuroAid",
+  title: "Yoga at Home | Personalised Yoga Sessions – CuroAid",
 
   description:
-    "Join personalised yoga classes at home with professional guidance from CuroAid. Convenient yoga sessions for beginners, seniors and wellness-focused individuals.",
+  "Practise yoga at home with CuroAid. Enjoy personalised yoga sessions to improve flexibility, support relaxation, enhance mobility and promote overall well-being.",
 
   keywords: [
     "yoga classes at home",

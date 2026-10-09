@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         title: "Elder Care Services at Home | CuroAid",
 
         description:
-            "Compassionate elderly care and support delivered to your doorstep.",
+            "Choose CuroAid for trusted elder care services at home. Get personalised elderly care, daily living assistance, medication support and compassionate care for seniors.",
 
         images: [
             {

@@ -7,10 +7,10 @@ import { imgDoctorAtHome } from "@/lib/assets";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Doctor at Home | CuroAid",
+  title: "Doctor at Home | Book a Home Visit Doctor – CuroAid",
 
   description:
-    "Get professional doctor consultations and medical care at home with CuroAid. Convenient healthcare from qualified doctors at your doorstep.",
+    "Need a doctor at home? CuroAid connects you with professional doctors for convenient home visits, personalised medical care and healthcare support at home.",
 
   keywords: [
     "doctor at home",

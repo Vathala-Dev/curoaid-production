@@ -3,10 +3,10 @@ import VeterinaryCareContent from "@/app/components/services/VeterinaryCareConte
 import { veterinaryImage } from "@/lib/assets";
 
 export const metadata: Metadata = {
-  title: "Veterinary Care at Home | CuroAid",
+  title: "Veterinary Care at Home | Home Visit Vet – CuroAid",
 
   description:
-    "Get professional veterinary consultation and pet healthcare support at home with CuroAid. Convenient veterinary care for your pets at your doorstep.",
+    "Get veterinary care at home with CuroAid. Book a home visit vet for your pets and receive convenient consultations, health check-ups and personalised veterinary care.",
 
   keywords: [
     "veterinary care at home",

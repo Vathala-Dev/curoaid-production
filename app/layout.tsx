@@ -78,11 +78,11 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "CuroAid | Home Healthcare Services",
+    default: "CuroAid – Healthcare at Home | Doctor, Nursing & Elder Care",
     template: "%s | CuroAid",
   },
   description:
-    "CuroAid provides professional home healthcare services including Doctor at Home, home nursing, physiotherapy, elder care, wound care and more.",
+    "Get trusted healthcare at home with CuroAid. Book home doctor visits, nursing, physiotherapy, elder care, wound care and more at your convenience.",
   metadataBase: new URL("https://curoaid.com"),
   alternates: {
     canonical: "/",

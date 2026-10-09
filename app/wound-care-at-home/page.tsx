@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     ],
 
     openGraph: {
-        title: "Wound Care Services at Home | CuroAid",
+        title: "Wound Care at Home | Professional Wound Care – CuroAid",
 
         description:
-            "Professional wound dressing and wound care support delivered to your doorstep.",
+            "Get professional wound care at home with CuroAid. Receive personalised wound dressing, post-surgical wound care and expert support to promote safe healing.",
 
         images: [
             {

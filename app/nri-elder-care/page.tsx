@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "NRI Elder Care Services in India | CuroAid",
 
   description:
-    "Reliable elder care and healthcare support in India for NRI families. Coordinate home care, nursing, doctor visits and healthcare services for your parents with CuroAid.",
+    "Stay connected to your parents' well-being from abroad with CuroAid NRI elder care services. Get trusted elderly care, medical assistance and personalised support for your loved ones in India.",
 
   keywords: [
     "NRI elder care",

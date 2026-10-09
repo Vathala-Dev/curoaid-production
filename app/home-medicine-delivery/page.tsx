@@ -3,10 +3,10 @@ import HomeMedicineDeliveryContent from "@/app/components/services/HomeMedicineD
 import { medicineImage } from "@/lib/assets";
 
 export const metadata: Metadata = {
-    title: "Home Medicine Delivery | CuroAid",
+    title: "Home Medicine Delivery | Medicines Delivered – CuroAid",
 
     description:
-        "Order medicines conveniently from CuroAid and get them delivered to your doorstep with reliable home medicine delivery services.",
+        "Get home medicine delivery with CuroAid. Enjoy convenient medicine delivery to your doorstep with reliable service for your healthcare and prescription medication needs.",
 
     keywords: [
         "home medicine delivery",

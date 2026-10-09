@@ -40,52 +40,59 @@ const doctorAtHomeData: ServiceData = {
             {
                 title: "General Physician Consultation",
                 description:
-                    "Get medical consultation for common illnesses and health concerns at home.",
+                    "Get medical consultation at home for common illnesses, symptoms, and everyday health concerns.",
                 image: doctor1,
-                imageAlt: "General physician consultation",
+                imageAlt: "General physician consultation at home",
             },
             {
-                title: "Elderly Medical Care",
+                title: "Elderly Care at Home",
                 description:
-                    "Convenient medical support for senior citizens who need regular attention.",
+                    "Personalised medical support for senior citizens who may find travelling to a clinic difficult.",
                 image: doctor2,
-                imageAlt: "Doctor caring for elderly patient",
+                imageAlt: "Doctor providing elderly care at home",
             },
             {
-                title: "Post-Hospitalisation Consultation",
+                title: "Chronic Disease Management",
                 description:
-                    "Continue your recovery with professional medical follow-up at home.",
+                    "Regular monitoring and medical guidance for conditions such as diabetes, hypertension, and other long-term health concerns.",
                 image: doctor3,
-                imageAlt: "Post hospitalisation doctor consultation",
+                imageAlt: "Doctor providing chronic disease management",
             },
             {
-                title: "Chronic Condition Support",
+                title: "Post-Hospitalization Care",
                 description:
-                    "Regular medical guidance for patients managing long-term health conditions.",
+                    "Receive medical follow-up and support at home during your recovery after hospital discharge.",
                 image: doctor4,
-                imageAlt: "Chronic condition medical care",
+                imageAlt: "Doctor providing post-hospitalization care at home",
             },
             {
-                title: "Elderly Medical Care",
+                title: "Follow-Up Doctor Visits",
                 description:
-                    "Convenient medical support for senior citizens who need regular attention.",
+                    "Continue your treatment and monitor your recovery with convenient follow-up consultations at home.",
                 image: doctor5,
-                imageAlt: "Doctor caring for elderly patient",
+                imageAlt: "Doctor conducting a follow-up visit at home",
             },
             {
-                title: "Post-Hospitalisation Consultation",
+                title: "Preventive Health Check-ups",
                 description:
-                    "Continue your recovery with professional medical follow-up at home.",
+                    "Stay proactive about your health with routine medical assessments and personalised health guidance.",
                 image: doctor6,
-                imageAlt: "Post hospitalisation doctor consultation",
+                imageAlt: "Doctor conducting a preventive health check-up",
             },
             {
-                title: "Chronic Condition Support",
+                title: "Medication Review & Guidance",
                 description:
-                    "Regular medical guidance for patients managing long-term health conditions.",
+                    "Get professional guidance regarding your ongoing medications and treatment plan.",
                 image: doctor7,
-                imageAlt: "Chronic condition medical care",
+                imageAlt: "Doctor providing medication guidance",
             },
+            // {
+            //     title: "Family Healthcare Support",
+            //     description:
+            //         "Convenient medical care for individuals and families, delivered in the comfort of home.",
+            //     image: doctor8,
+            //     imageAlt: "Family healthcare consultation at home",
+            // },
         ],
     },
 
@@ -154,7 +161,7 @@ const doctorAtHomeData: ServiceData = {
                 description: "Avoid unnecessary travel and waiting time.",
                 icon: tick,
             },
-           
+
         ],
     },
 

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Medical Equipment Rental & Sale | CuroAid",
 
   description:
-    "Rent or purchase medical equipment for home healthcare with CuroAid. Explore hospital beds, wheelchairs, mobility aids and other patient-care equipment.",
+    "Rent or buy medical equipment with CuroAid. Find reliable healthcare equipment for home use, including mobility aids and essential medical devices, with convenient service and support.",
 
   keywords: [
     "medical equipment rental",

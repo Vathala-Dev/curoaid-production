@@ -3,10 +3,10 @@ import Contact from "../components/contact/contact";
 
 
 export const metadata: Metadata = {
-  title: "Contact CuroAid | Home Healthcare Services",
+  title: "Contact CuroAid | Home Healthcare Support & Assistance",
 
   description:
-    "Contact CuroAid for trusted home healthcare services, appointment support, and patient assistance. Our healthcare team is here to help you with your care needs.",
+    "Contact CuroAid for trusted home healthcare services. Get assistance with doctor visits, nursing, physiotherapy, elder care and other healthcare needs at home.",
 
   keywords: [
     "Contact CuroAid",
@@ -56,5 +56,5 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return <Contact/>;
+  return <Contact />;
 }
