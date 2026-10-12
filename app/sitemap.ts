@@ -6,6 +6,26 @@ const BASE_URL = "https://curoaid.com";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     try {
         const blogs = await getBlogs();
+        const servicePages = [
+            "doctor-at-home",
+            "home-nursing-services",
+            "wound-care-service",
+            "eldercare",
+            "veterinary",
+            "physiotherapy",
+            "yoga",
+            "nri-patient-care",
+            "hospital-equipment",
+            "renal-blood-test",
+        ];
+
+        const serviceSitemap: MetadataRoute.Sitemap = servicePages.map((slug) => ({
+            url: `${BASE_URL}/${slug}`,
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.9,
+        }));
+
 
         const staticPages: MetadataRoute.Sitemap = [
             {
@@ -45,7 +65,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 priority: 0.7,
             }));
 
-        return [...staticPages, ...blogPages];
+        return [...staticPages, ...blogPages, ...serviceSitemap];
     } catch (error) {
         console.error("Failed to generate sitemap:", error);
 
@@ -62,6 +82,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 changeFrequency: "daily",
                 priority: 0.9,
             },
+            
+
         ];
     }
 }

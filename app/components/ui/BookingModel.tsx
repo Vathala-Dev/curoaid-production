@@ -18,7 +18,8 @@ const SERVICES = [
     { key: "yoga", name: "Yoga" },
     { key: "nri-care", name: "NRI Patient Care" },
     { key: "equipment", name: "Hospital Equipment" },
-    { key: "renal-test", name: "Renal Blood Test" },
+    { key: "renal-test", name: "Blood Test at home" },
+    { key: "Order-Medicine", name: "Medicine Home Delivery" },
 ];
 
 export default function BookingModal({
